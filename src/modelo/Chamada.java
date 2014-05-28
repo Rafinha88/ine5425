@@ -18,6 +18,11 @@ public class Chamada {
     private long tempoEmQueSeRealizou;
     private EstadoDeFinalizacao;
     
+    public Chamada(Celula origem, long tempoEmQueSeRealizou) {
+        this.celulaOrigem = origem;
+        this.tempoEmQueSeRealizou = tempoEmQueSeRealizou;
+    }
+    
     public Celula getCelulaOrigem() {
         return this.celulaOrigem;
     }
@@ -46,8 +51,9 @@ public class Chamada {
         this.tempoEmQueSeRealizou = tempoQueSeRealizou;
     }
             
-    
-    
+    public void gerarTempoDaChamada() {
+        
+    }
     
     
 }

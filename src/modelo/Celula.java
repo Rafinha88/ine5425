@@ -6,6 +6,8 @@
 
 package modelo;
 
+import org.apache.commons.math3.distribution.ExponentialDistribution;
+
 /**
  *
  * @author rafaelmelchert
@@ -15,10 +17,14 @@ public class Celula {
     private char nome;
     private int canaisDisponiveis;
     private double taxaMediaOcupacao;
+    private double numeroDeChamadasQueChegam;
+    private ExponentialDistribution processoDePoisson;
     
-    public Celula(char nome, int canais) {
+    public Celula(char nome, int canais, double numeroDeChamdasQueChegam) {
         this.nome = nome;
         this.canaisDisponiveis = canais;
+        this.numeroDeChamadasQueChegam = numeroDeChamdasQueChegam;
+        this.processoDePoisson = new ExponentialDistribution(numeroDeChamadasQueChegam);
     }
     
     public char getNome() {
@@ -41,5 +47,20 @@ public class Celula {
     public void setTaxamediaOcupacao(double taxaMediaOcupacao) {
         this.taxaMediaOcupacao = taxaMediaOcupacao;
     }
+    
+    public double getNumeroDeChamadasQueChegam() {
+        return this.numeroDeChamadasQueChegam;
+    }
+    public void setNumeroDeChamadasQueChegam(double chamadasQueChegam) {
+        this.numeroDeChamadasQueChegam = chamadasQueChegam;
+    }
+    
+    public void gerarChamada() {
+        long tempoEmQueSeRealizou = (long) processoDePoisson.sample();
+        Chamada novaChamada = new Chamada(this, tempoEmQueSeRealizou);
+        
+    }
+    
+    
     
 }
