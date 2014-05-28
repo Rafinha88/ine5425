@@ -6,6 +6,8 @@
 
 package modelo;
 
+import org.apache.commons.math3.distribution.*;
+
 /**
  *
  * @author rafaelmelchert
@@ -17,7 +19,7 @@ public class Chamada {
     private long duracao;
     private long tempoEmQueSeRealizou;
     private EstadoDeFinalizacao;
-    
+        
     public Chamada(Celula origem, long tempoEmQueSeRealizou) {
         this.celulaOrigem = origem;
         this.tempoEmQueSeRealizou = tempoEmQueSeRealizou;
@@ -51,8 +53,8 @@ public class Chamada {
         this.tempoEmQueSeRealizou = tempoQueSeRealizou;
     }
             
-    public void gerarTempoDaChamada() {
-        
+    public void gerarTempoDaChamada(RealDistribution distribuicao) {
+        this.duracao = (long ) distribuicao.sample();
     }
     
     

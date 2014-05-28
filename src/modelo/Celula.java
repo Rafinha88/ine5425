@@ -7,6 +7,7 @@
 package modelo;
 
 import org.apache.commons.math3.distribution.ExponentialDistribution;
+import org.apache.commons.math3.distribution.RealDistribution;
 
 /**
  *
@@ -19,6 +20,7 @@ public class Celula {
     private double taxaMediaOcupacao;
     private double numeroDeChamadasQueChegam;
     private ExponentialDistribution processoDePoisson;
+    private RealDistribution probabilidadeDeOcorrenciaDeChamada;
     
     public Celula(char nome, int canais, double numeroDeChamdasQueChegam) {
         this.nome = nome;
@@ -60,7 +62,5 @@ public class Celula {
         Chamada novaChamada = new Chamada(this, tempoEmQueSeRealizou);
         
     }
-    
-    
-    
+
 }
