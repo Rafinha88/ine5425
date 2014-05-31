@@ -84,7 +84,9 @@ public class Simulador {
 		relogio = new Relogio();
 		estatistica = Estatistica.getInstance();
 		// TODO: Adicionar gerador com os dados da view
-		gerador = null;
+		gerador = new Gerador(mediaFuncaoTempoC1, frequenciaC1C1, frequenciaC1C2,
+                            frequenciaC1FA, mediaFuncaoTempoC2, frequenciaC2C1, frequenciaC2C2,
+                            frequenciaC2FA, distribuicaoDuracao, parametro1, parametro2, parametro3 );
 	}
 
 	private static void loop() {

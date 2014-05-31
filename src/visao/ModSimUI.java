@@ -168,6 +168,12 @@ public class ModSimUI extends javax.swing.JFrame {
 
         jLabel3.setText("C1FA");
 
+        tFrequenciaC1C1.setText("0");
+
+        tFrequenciaC1C2.setText("0");
+
+        tFrequenciaC1FA.setText("0");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -215,6 +221,12 @@ public class ModSimUI extends javax.swing.JFrame {
 
         jLabel6.setText("C2FA");
 
+        tFrequenciaC2C1.setText("0");
+
+        tFrequenciaC2C2.setText("0");
+
+        tFrequenciaC2FA.setText("0");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -259,6 +271,10 @@ public class ModSimUI extends javax.swing.JFrame {
         jLabel7.setText("C1");
 
         jLabel8.setText("C2");
+
+        tCanaisC1.setText("0");
+
+        tCanaisC2.setText("0");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -305,6 +321,10 @@ public class ModSimUI extends javax.swing.JFrame {
 
         jLabel14.setText("C2");
 
+        tMediaFuncaoTempoC1.setText("0");
+
+        tMediaFuncaoTempoC2.setText("0");
+
         jLabel15.setText("Tempo (Duracao) das Chamadas");
 
         jLabel16.setText("Distribuicao");
@@ -317,6 +337,12 @@ public class ModSimUI extends javax.swing.JFrame {
         });
 
         jLabel17.setText("Exponencial");
+
+        tParametro1.setText("0");
+
+        tParametro2.setText("0");
+
+        tParametro3.setText("0");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -394,6 +420,8 @@ public class ModSimUI extends javax.swing.JFrame {
         );
 
         jLabel18.setText("Tempo de Simulação");
+
+        tTempoSimulacao.setText("0");
 
         botaoIniciar.setText("Iniciar");
         botaoIniciar.addActionListener(new java.awt.event.ActionListener() {

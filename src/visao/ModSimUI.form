@@ -156,10 +156,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tFrequenciaC1C1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tFrequenciaC1C2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tFrequenciaC1FA">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -238,10 +247,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tFrequenciaC2C1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tFrequenciaC2C2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tFrequenciaC2FA">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -305,8 +323,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tCanaisC1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tCanaisC2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -445,8 +469,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tMediaFuncaoTempoC1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tMediaFuncaoTempoC2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel15">
           <Properties>
@@ -480,10 +510,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tParametro1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tParametro2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tParametro3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -524,6 +563,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tTempoSimulacao">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="botaoIniciar">
           <Properties>
