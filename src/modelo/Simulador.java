@@ -44,6 +44,7 @@ public class Simulador {
         static ModSimUI visao;
         
 	static boolean pausado = false;
+       
 
 	private static int numeroDePassosDeExecucao;
 

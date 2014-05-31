@@ -32,6 +32,8 @@ public class ModSimUI extends javax.swing.JFrame {
     double parametro3;
 
     long tempoSimulacao;
+    boolean iniciou;
+    boolean pausado;
 
     public int getFrequenciaC1C1() {
         return frequenciaC1C1;
@@ -549,10 +551,16 @@ public class ModSimUI extends javax.swing.JFrame {
         if (estadoBotao.equalsIgnoreCase("Iniciar")) {
             if (!verificarTempoDeSimulacao()) {
                 botaoIniciar.setText("Pausar");
+                iniciou = true;
             }
         }
         if (estadoBotao.equalsIgnoreCase("Pausar")) {
-            botaoIniciar.setText("Iniciar");
+            botaoIniciar.setText("Resumir");
+            pausado = true;
+        }
+        if (estadoBotao.equalsIgnoreCase("Resumir")) {
+            botaoIniciar.setText("Pausar");
+            pausado = false;
         }
     }//GEN-LAST:event_botaoIniciarActionPerformed
 
