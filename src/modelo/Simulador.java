@@ -13,7 +13,7 @@ public class Simulador {
 	// operador.
 
 	static Relogio relogio;
-	static Gerador geradorDeChamada;
+	static Gerador gerador;
 	static Estatistica estatistica;
 	static ListaEncadeadaOrdenada<Evento> eventos;
 
@@ -29,7 +29,7 @@ public class Simulador {
 		relogio = new Relogio();
 		estatistica = Estatistica.getInstance();
 		// TODO: Adicionar gerador com os dados da view
-		geradorDeChamada = null;
+		gerador = null;
 	}
 
 	private static void loop() {
@@ -48,7 +48,10 @@ public class Simulador {
 	private static void executarEvento() {
 		Evento evento = eventos.pop();
 		if (evento instanceof Chegada) {
-			geradorDeChamada.gerarChamadaEmC1(0);
+			eventos.adicionarOrdenado(gerador.gerarProximaChegadaC1(relogio
+					.getTempo()));
+			eventos.adicionarOrdenado(gerador.gerarProximaChegadaC2(relogio
+					.getTempo()));
 		}
 		Evento novoEvento = evento.executar();
 		if (novoEvento != null) {
