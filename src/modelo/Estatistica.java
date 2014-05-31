@@ -1,12 +1,15 @@
 package modelo;
 
+import modelo.Estatistica;
+
 public class Estatistica {
 
 	// Bloco apenas contador
-	private long numeroDeChamadasNoSistema;
-	private long numeroDeChamadasFinalizadas;
-	private long numeroDeChamadasFalhadas;
-	private long numeroDeChamdasPerdidasNoDeslocamento;
+	private int chamadasNoSistema;
+	private int chamadasCompletadas;
+	private int chamadasSemSinal;
+	private int chamadaPerdidaFaltaDeCanalC1;
+	private int chamadaPerdidaFaltaDeCanalC2;
 
 	// Bloco que necessita de calculos.
 	private long menorTempoDeChamada;
@@ -18,6 +21,19 @@ public class Estatistica {
 	// chamada.
 	private long tempoTotalDeChamadas;
 	private int numeroDeChamadasRealizadas;
+
+	private static Estatistica instance;
+
+	private Estatistica() {
+
+	}
+
+	public static Estatistica getInstance() {
+		if (instance == null) {
+			return new Estatistica();
+		}
+		return instance;
+	}
 
 	/**
 	 * Verifica se o tempo é algum dos extremos. O menor tempo de chamada ou o
@@ -38,37 +54,48 @@ public class Estatistica {
 
 	}
 
-	public long getNumeroDeChamadasNoSistema() {
-		return numeroDeChamadasNoSistema;
+	public void incrementarChamadasNoSistema() {
+		chamadasNoSistema++;
 	}
 
-	public void setNumeroDeChamadasNoSistema(long numeroDeChamadasNoSistema) {
-		this.numeroDeChamadasNoSistema = numeroDeChamadasNoSistema;
+	public void decrementarNumeroDeChamadasNoSistema() {
+		chamadasNoSistema--;
 	}
 
-	public long getNumeroDeChamadasFinalizadas() {
-		return numeroDeChamadasFinalizadas;
+	public void incrementarChamadasCompletadas() {
+		chamadasCompletadas++;
 	}
 
-	public void setNumeroDeChamadasFinalizadas(long numeroDeChamadasFinalizadas) {
-		this.numeroDeChamadasFinalizadas = numeroDeChamadasFinalizadas;
+	public void incrementarChamadasSemSinal() {
+		chamadasSemSinal++;
 	}
 
-	public long getNumeroDeChamadasFalhadas() {
-		return numeroDeChamadasFalhadas;
+	public void incrementarChamadaPerdidaFaltaDeCanalC1() {
+		chamadaPerdidaFaltaDeCanalC1++;
 	}
 
-	public void setNumeroDeChamadasFalhadas(long numeroDeChamadasFalhadas) {
-		this.numeroDeChamadasFalhadas = numeroDeChamadasFalhadas;
+	public void incrementarChamadaPerdidaFaltaDeCanalC2() {
+		chamadaPerdidaFaltaDeCanalC2++;
 	}
 
-	public long getNumeroDeChamdasPerdidasNoDeslocamento() {
-		return numeroDeChamdasPerdidasNoDeslocamento;
+	public int getChamadasNoSistema() {
+		return chamadasNoSistema;
 	}
 
-	public void setNumeroDeChamdasPerdidasNoDeslocamento(
-			long numeroDeChamdasPerdidasNoDeslocamento) {
-		this.numeroDeChamdasPerdidasNoDeslocamento = numeroDeChamdasPerdidasNoDeslocamento;
+	public int getChamadasCompletadas() {
+		return chamadasCompletadas;
+	}
+
+	public int getChamadasSemSinal() {
+		return chamadasSemSinal;
+	}
+
+	public int getChamadaPerdidaFaltaDeCanalC1() {
+		return chamadaPerdidaFaltaDeCanalC1;
+	}
+
+	public int getChamadaPerdidaFaltaDeCanalC2() {
+		return chamadaPerdidaFaltaDeCanalC2;
 	}
 
 	public long getMenorTempoDeChamada() {
