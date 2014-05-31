@@ -1,31 +1,40 @@
 package modelo;
 
 import java.util.Random;
+import org.apache.commons.math3.distribution.EnumeratedRealDistribution;
 import org.apache.commons.math3.distribution.ExponentialDistribution;
+import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.distribution.RealDistribution;
+import org.apache.commons.math3.distribution.TriangularDistribution;
+import org.apache.commons.math3.distribution.UniformRealDistribution;
 
 public class Gerador {
 
-	private final RealDistribution distribuicaoEmC1;
+	private final RealDistribution funcaoTempoC1;
         double mediaChegadaDeChamadaC1;
 	private final int probabilidadeDeGerarC1C1;
 	private final int probabilidadeDeGerarC1C2;
 	// Atributo abaixo pode ser retirado? � o complemento dos c1c1 e c1c2.
 	private final int probabilidadeDeGerarC1FA;
 
-	private final RealDistribution distribuicaoEmC2;
+	private final RealDistribution funcaoTempoC2;
         double mediaChegadaDeChamadaC2;
 	private final int probabilidadeDeGerarC2C1;
 	private final int probabilidadeDeGerarC2C2;
 	private final int probabilidadeDeGerarC2FA;
 
 	private final Random aleatorio;
+        private final RealDistribution distribuicaoDuracaoChamada;
 
 	public Gerador(double mediaChegadaDeChamadaC1,
 			int probabilidadeDeGerarC1C1, int probabilidadeDeGerarC1C2,
 			int probabilidadeDeGerarC1FA, double mediaChegadaDeChamadaC2,
 			int probabilidadeDeGerarC2C1, int probabilidadeDeGerarC2C2,
-			int probabilidadeDeGerarC2FA) {
+			int probabilidadeDeGerarC2FA,
+                        String funcaoDeProbabilidade,
+                        double parametro1,
+                        double parametro2,
+                        double parametro3 ) {
 		super();
 		this.mediaChegadaDeChamadaC1 = mediaChegadaDeChamadaC1;
 		this.probabilidadeDeGerarC1C1 = probabilidadeDeGerarC1C1;
@@ -36,16 +45,39 @@ public class Gerador {
 		this.probabilidadeDeGerarC2C2 = probabilidadeDeGerarC2C2;
 		this.probabilidadeDeGerarC2FA = probabilidadeDeGerarC2FA;
 		aleatorio = new Random();
-                this.distribuicaoEmC1 = new ExponentialDistribution(mediaChegadaDeChamadaC1);
-                this.distribuicaoEmC2 = new ExponentialDistribution(mediaChegadaDeChamadaC2);
+                this.funcaoTempoC1 = new ExponentialDistribution(mediaChegadaDeChamadaC1);
+                this.funcaoTempoC2 = new ExponentialDistribution(mediaChegadaDeChamadaC2);
+	
+                distribuicaoDuracaoChamada = setFuncaoDeProbabilidade(funcaoDeProbabilidade, parametro1, parametro2, parametro3);
+        }
+        
+        private RealDistribution setFuncaoDeProbabilidade(String funcaoDeProbabilidade,
+			double parametro1, double parametro2, double parametro3) {
+            
+                double[] valores = {parametro1};
+                double[] probabilidades = {1};
+            
+		switch (funcaoDeProbabilidade) {
+		case "Normal":
+                    return new NormalDistribution(parametro1, parametro2);
+		case "Uniforme":
+                    return new UniformRealDistribution(parametro1, parametro2);
+		case "Exponencial":
+                    return new ExponentialDistribution(parametro1);
+                case "Triangular":
+                    return new TriangularDistribution(parametro1, parametro2, parametro3);
+                default:
+                    return new EnumeratedRealDistribution(valores, probabilidades);
+                }
 	}
+        
 
 	private Chamada gerarChamadaEmC1(long tempo) {
 		double proximoAleatorio = aleatorio.nextDouble();
 		Chamada chamada = null;
 		Celula origem = CelulaSingletonBuilder.getInstance().constroiOuGetC1();
 		Celula c2 = CelulaSingletonBuilder.getInstance().constroiOuGetC2();
-		long duracao = (long) distribuicaoEmC1.sample();
+		long duracao = (long) distribuicaoDuracaoChamada.sample();
 
 		if (proximoAleatorio < probabilidadeDeGerarC1C1) {
 			chamada = new Chamada(origem, origem, duracao, tempo);
@@ -63,7 +95,7 @@ public class Gerador {
 		Chamada chamada = null;
 		Celula origem = CelulaSingletonBuilder.getInstance().constroiOuGetC2();
 		Celula c1 = CelulaSingletonBuilder.getInstance().constroiOuGetC1();
-		long duracao = (long) distribuicaoEmC2.sample();
+		long duracao = (long) distribuicaoDuracaoChamada.sample();
                 
 		if (proximoAleatorio < probabilidadeDeGerarC2C1) {
 			chamada = new Chamada(origem, origem, duracao, tempo);
@@ -80,7 +112,7 @@ public class Gerador {
             Chegada proximaChegadaC1;
             Chamada chamadaEmC1 = gerarChamadaEmC1(tempo);
             
-            long tempoDaProximaChegadaC1 = tempo + (long) distribuicaoEmC1.sample();
+            long tempoDaProximaChegadaC1 = tempo + (long) funcaoTempoC1.sample();
             proximaChegadaC1 = new Chegada(chamadaEmC1, tempoDaProximaChegadaC1);
             return proximaChegadaC1;
         }
@@ -89,7 +121,7 @@ public class Gerador {
             Chegada proximaChegadaC2;
             Chamada chamadaEmC2 = gerarChamadaEmC1(tempo);
             
-            long tempoDaProximaChegadaC2 = tempo + (long) distribuicaoEmC2.sample();
+            long tempoDaProximaChegadaC2 = tempo + (long) funcaoTempoC2.sample();
             proximaChegadaC2 = new Chegada(chamadaEmC2, tempoDaProximaChegadaC2);
             return proximaChegadaC2;
         }

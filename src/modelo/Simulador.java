@@ -20,7 +20,7 @@ public class Simulador {
 	static boolean pausado = false;
 
 	public static void main(String[] args) {
-		setup();
+                setup();
 		loop();
 	}
 
