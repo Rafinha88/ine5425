@@ -76,4 +76,24 @@ public class Gerador {
 		return chamada;
 	}
 
+        public Chegada gerarProximaChegadaC1(long tempo) {
+            Chegada proximaChegadaC1;
+            Chamada chamadaEmC1 = gerarChamadaEmC1(tempo);
+            
+            long tempoDaProximaChegadaC1 = tempo + (long) distribuicaoEmC1.sample();
+            proximaChegadaC1 = new Chegada(chamadaEmC1, tempoDaProximaChegadaC1);
+            return proximaChegadaC1;
+        }
+        
+        public Chegada gerarProximaChegadaC2(long tempo) {
+            Chegada proximaChegadaC2;
+            Chamada chamadaEmC2 = gerarChamadaEmC1(tempo);
+            
+            long tempoDaProximaChegadaC2 = tempo + (long) distribuicaoEmC2.sample();
+            proximaChegadaC2 = new Chegada(chamadaEmC2, tempoDaProximaChegadaC2);
+            return proximaChegadaC2;
+        }
+        
+        
+        
 }

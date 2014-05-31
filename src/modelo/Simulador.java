@@ -3,7 +3,7 @@ package modelo;
 import modelo.Chegada;
 import modelo.Estatistica;
 import modelo.Evento;
-import modelo.GeradorDeChamada;
+import modelo.Gerador;
 import modelo.ListaEncadeadaOrdenada;
 import modelo.Relogio;
 
