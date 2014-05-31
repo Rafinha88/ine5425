@@ -1,5 +1,6 @@
 package modelo;
 
+
 import visao.ModSimUI;
 import modelo.Chegada;
 import modelo.Estatistica;
@@ -7,6 +8,8 @@ import modelo.Evento;
 import modelo.Gerador;
 import modelo.ListaEncadeadaOrdenada;
 import modelo.Relogio;
+
+import org.apache.commons.math3.distribution.NormalDistribution;
 
 public class Simulador {
 
@@ -41,6 +44,8 @@ public class Simulador {
         static ModSimUI visao;
         
 	static boolean pausado = false;
+
+	private static int numeroDePassosDeExecucao;
 
         static private void setarVariaveisVisaoParaModelo() {
             frequenciaC1C1 = visao.getFrequenciaC1C1();
@@ -85,9 +90,14 @@ public class Simulador {
 	private static void loop() {
 		// TODO: Implementar pausa etc.
 		while (!pausado) {
-			avancarTempo();
-			executarEvento();
+			int contador = 0;
+			while (contador != numeroDePassosDeExecucao) {
+				avancarTempo();
+				executarEvento();
+				contador++;
+			}
 			mostrarEstatisticas();
+
 		}
 	}
 

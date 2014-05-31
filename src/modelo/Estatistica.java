@@ -25,12 +25,13 @@ public class Estatistica {
 	private static Estatistica instance;
 
 	private Estatistica() {
-
+		menorTempoDeChamada = 9999;
+		maiorTempoDeChamada = -1111;
 	}
 
 	public static Estatistica getInstance() {
 		if (instance == null) {
-			return new Estatistica();
+			instance = new Estatistica();
 		}
 		return instance;
 	}
