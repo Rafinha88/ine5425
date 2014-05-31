@@ -12,8 +12,8 @@ public class Relogio {
 		return tempo;
 	}
 
-	public void avancarEm(long tempo) {
-		this.tempo += tempo;
+	public void avancarPara(long tempo) {
+		this.tempo = tempo;
 	}
 
 }

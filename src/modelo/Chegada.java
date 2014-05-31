@@ -1,26 +1,28 @@
 package modelo;
 
+import modelo.Chamada;
+import modelo.Estatistica;
+import modelo.Evento;
+import modelo.TrocaDeCelula;
+
 public class Chegada extends Evento {
 
-	public Chegada(int id, Chamada chamada, long tempo) {
-		super(id, chamada, tempo);
+	public Chegada(Chamada chamada, long tempo) {
+		super(chamada, tempo);
 	}
 
 	@Override
-	public void executar() {
+	public Evento executar() {
 		getChamada().iniciar();
-		gerarProximaChegada();
+		Evento evento = new TrocaDeCelula(getChamada(), getTempo()
+				+ (getChamada().getDuracao() / 2));
 		coletarEstatisticas();
-	}
-
-	// TODO: Implementar
-	private Evento gerarProximaChegada() {
-		return new Chegada(0, null, 0);
+		return evento;
 	}
 
 	// TODO: Pensar em como gerar as estatisticas
 	private void coletarEstatisticas() {
-
+		Estatistica.getInstance().incrementarChamadasNoSistema();
 	}
 
 }

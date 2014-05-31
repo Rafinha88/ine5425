@@ -1,19 +1,16 @@
 package modelo;
 
+import modelo.Chamada;
+import modelo.Evento;
+
 public abstract class Evento implements Comparable<Evento> {
 
-	private int id;
 	private Chamada chamada;
 	private long tempo;
 
-	public Evento(int id, Chamada chamada, long tempo) {
-		this.id = id;
+	public Evento(Chamada chamada, long tempo) {
 		this.chamada = chamada;
 		this.tempo = tempo;
-	}
-
-	public int getId() {
-		return id;
 	}
 
 	public Chamada getChamada() {
@@ -36,6 +33,6 @@ public abstract class Evento implements Comparable<Evento> {
 		}
 	}
 
-	public abstract void executar();
+	public abstract Evento executar();
 
 }
