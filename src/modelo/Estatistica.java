@@ -30,7 +30,7 @@ public class Estatistica {
 
 	public static Estatistica getInstance() {
 		if (instance == null) {
-			return new Estatistica();
+			instance = new Estatistica();
 		}
 		return instance;
 	}
