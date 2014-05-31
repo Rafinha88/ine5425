@@ -1,5 +1,8 @@
 package modelo;
 
+import modelo.Celula;
+import modelo.CelulaSingletonBuilder;
+
 public class CelulaSingletonBuilder {
 
 	private Celula c1;
