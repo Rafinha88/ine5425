@@ -3,11 +3,11 @@ package modelo;
 
 public class Simulador {
 
-	// TODO: Adicionar os atributos recebidos pela view de configuração do
+	// TODO: Adicionar os atributos recebidos pela view de configuraï¿½ï¿½o do
 	// operador.
 
 	static Relogio relogio;
-	static GeradorDeChamada geradorDeChamada;
+	static Gerador geradorDeChamada;
 	static Estatistica estatistica;
 	static ListaEncadeadaOrdenada<Evento> eventos;
 

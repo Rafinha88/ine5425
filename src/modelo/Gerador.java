@@ -4,7 +4,7 @@ import java.util.Random;
 import org.apache.commons.math3.distribution.ExponentialDistribution;
 import org.apache.commons.math3.distribution.RealDistribution;
 
-public class GeradorDeChamada {
+public class Gerador {
 
 	private final RealDistribution distribuicaoEmC1;
         double mediaChegadaDeChamadaC1;
@@ -21,7 +21,7 @@ public class GeradorDeChamada {
 
 	private final Random aleatorio;
 
-	public GeradorDeChamada(double mediaChegadaDeChamadaC1,
+	public Gerador(double mediaChegadaDeChamadaC1,
 			int probabilidadeDeGerarC1C1, int probabilidadeDeGerarC1C2,
 			int probabilidadeDeGerarC1FA, double mediaChegadaDeChamadaC2,
 			int probabilidadeDeGerarC2C1, int probabilidadeDeGerarC2C2,
@@ -40,7 +40,7 @@ public class GeradorDeChamada {
                 this.distribuicaoEmC2 = new ExponentialDistribution(mediaChegadaDeChamadaC2);
 	}
 
-	public Chamada gerarChamadaEmC1(long tempo) {
+	private Chamada gerarChamadaEmC1(long tempo) {
 		double proximoAleatorio = aleatorio.nextDouble();
 		Chamada chamada = null;
 		Celula origem = CelulaSingletonBuilder.getInstance().constroiOuGetC1();
@@ -58,7 +58,7 @@ public class GeradorDeChamada {
 		return chamada;
 	}
 
-	public Chamada gerarChamadaEmC2(long tempo) {
+	private Chamada gerarChamadaEmC2(long tempo) {
 		double proximoAleatorio = aleatorio.nextDouble();
 		Chamada chamada = null;
 		Celula origem = CelulaSingletonBuilder.getInstance().constroiOuGetC2();
