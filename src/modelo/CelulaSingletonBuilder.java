@@ -41,12 +41,11 @@ public class CelulaSingletonBuilder {
 	public void comNumeroDeCanaisDoC1(int numeroDeCanais) {
 		this.numeroDeCanaisDoC1 = numeroDeCanais;
 	}
-	
 
 	public static boolean isC1JaCriado() {
 		return c1JaCriado;
 	}
-	
+
 	/**
 	 * Garante que o c1 será o mesmo em toda a aplicação. Singleton "simulado".
 	 * 
@@ -55,10 +54,9 @@ public class CelulaSingletonBuilder {
 	public Celula constroiOuGetC1() {
 		if (c1 == null) {
 			c1JaCriado = true;
-			return new Celula(nomeDoC1, numeroDeCanaisDoC1);
-		} else {
-			return c1;
+			c1 = new Celula(nomeDoC1, numeroDeCanaisDoC1);
 		}
+		return c1;
 	}
 
 	public void comNomeDoC2(String nome) {
@@ -68,7 +66,7 @@ public class CelulaSingletonBuilder {
 	public void comNumeroDeCanaisDoC2(int numeroDeCanais) {
 		this.numeroDeCanaisDoC2 = numeroDeCanais;
 	}
-	
+
 	public boolean isC2JaCriado() {
 		return c2JaCriado;
 	}
@@ -81,9 +79,8 @@ public class CelulaSingletonBuilder {
 	public Celula constroiOuGetC2() {
 		if (c2 == null) {
 			c2JaCriado = true;
-			return new Celula(nomeDoC2, numeroDeCanaisDoC2);
-		} else {
-			return c2;
+			c2 = new Celula(nomeDoC2, numeroDeCanaisDoC2);
 		}
+		return c2;
 	}
 }
