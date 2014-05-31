@@ -322,7 +322,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" pref="194" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" pref="212" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -344,7 +344,6 @@
                                           <Component id="jTextField9" min="-2" pref="60" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -439,9 +438,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField9">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField10">
         </Component>
@@ -459,16 +455,16 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
-                <StringItem index="0" value="Normal"/>
+                <StringItem index="0" value="Triangular"/>
                 <StringItem index="1" value="Uniforme"/>
                 <StringItem index="2" value="Exponencial"/>
-                <StringItem index="3" value="Triangular"/>
+                <StringItem index="3" value="Normal"/>
                 <StringItem index="4" value="Constante"/>
               </StringArray>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox1ItemStateChanged"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel17">

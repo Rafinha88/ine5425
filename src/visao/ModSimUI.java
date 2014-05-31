@@ -6,10 +6,8 @@
 
 package visao;
 
-/**
- *
- * @author rafaelmelchert
- */
+import javax.swing.JOptionPane;
+
 public class ModSimUI extends javax.swing.JFrame {
 
     /**
@@ -223,20 +221,14 @@ public class ModSimUI extends javax.swing.JFrame {
 
         jLabel14.setText("C2");
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
-
         jLabel15.setText("Tempo (Duracao) das Chamadas");
 
         jLabel16.setText("Distribuicao");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Normal", "Uniforme", "Exponencial", "Triangular", "Constante" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Triangular", "Uniforme", "Exponencial", "Normal", "Constante" }));
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
             }
         });
 
@@ -253,7 +245,7 @@ public class ModSimUI extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
-                                .addGap(18, 194, Short.MAX_VALUE))
+                                .addGap(18, 212, Short.MAX_VALUE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel13)
@@ -269,8 +261,7 @@ public class ModSimUI extends javax.swing.JFrame {
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel12)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -351,14 +342,29 @@ public class ModSimUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+        String distribuicaoDuracao = evt.getItem().toString();
+        switch(distribuicaoDuracao) {
+            case "Triangular" : jTextField11.setEnabled(true);jTextField12.setEnabled(true); jTextField13.setEnabled(true);
+            break;
+            case "Normal" : jTextField11.setEnabled(true); jTextField12.setEnabled(true); jTextField13.setEnabled(false);
+            break;
+            case "Uniforme" : jTextField11.setEnabled(true); jTextField12.setEnabled(true); jTextField13.setEnabled(false);
+            break;
+            case "Exponencial" : jTextField11.setEnabled(true); jTextField12.setEnabled(false); jTextField13.setEnabled(false);
+            break;
+            case "Constante" : jTextField11.setEnabled(true); jTextField12.setEnabled(false); jTextField13.setEnabled(false);
+            break;
+        }
+        
+    }//GEN-LAST:event_jComboBox1ItemStateChanged
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
+    public void verificarFrequencia(int frequencia1, int frequencia2, int frequencia3) {
+        //if(frequencia1 + frequencia2 + frequencia3 > 100)
+            //show dialog message
+    }
+    
     /**
      * @param args the command line arguments
      */
