@@ -8,10 +8,6 @@ package modelo;
 
 import org.apache.commons.math3.distribution.*;
 
-/**
- *
- * @author rafaelmelchert
- */
 public class Chamada {
     
     private Celula celulaOrigem;
@@ -20,8 +16,9 @@ public class Chamada {
     private long tempoEmQueSeRealizou;
     private EstadoDeFinalizacao;
         
-    public Chamada(Celula origem, long tempoEmQueSeRealizou) {
+    Chamada(Celula origem, Celula destino, long tempoEmQueSeRealizou) {
         this.celulaOrigem = origem;
+        this.celulaDestino = destino;
         this.tempoEmQueSeRealizou = tempoEmQueSeRealizou;
     }
     
