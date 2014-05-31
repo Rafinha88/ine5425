@@ -1,50 +1,57 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package modelo;
 
 public class Celula {
-    
-    private char nome;
-    private int canaisDisponiveis;
-    private double taxaMediaOcupacao;
-    private double numeroDeChamadasQueChegam;
-    
-    Celula(char nome, int canais, double numeroDeChamdasQueChegam) {
-        this.nome = nome;
-        this.canaisDisponiveis = canais;
-        this.numeroDeChamadasQueChegam = numeroDeChamdasQueChegam;
-    }
-    
-    public char getNome() {
-        return this.nome;
-    }
-    public void setNome(char nome) {
-        this.nome = nome;
-    }
-    
-    public int getCanaisDisponiveis() {
-        return this.canaisDisponiveis;
-    }
-    public void setCanaisDisponiveis(int canaisDisponiveis) {
-        this.canaisDisponiveis = canaisDisponiveis;
-    }
-    
-    public double getTaxaMediaOcupacao() {
-        return this.taxaMediaOcupacao;
-    }
-    public void setTaxamediaOcupacao(double taxaMediaOcupacao) {
-        this.taxaMediaOcupacao = taxaMediaOcupacao;
-    }
-    
-    public double getNumeroDeChamadasQueChegam() {
-        return this.numeroDeChamadasQueChegam;
-    }
-    public void setNumeroDeChamadasQueChegam(double chamadasQueChegam) {
-        this.numeroDeChamadasQueChegam = chamadasQueChegam;
-    }
+
+	private final String nome;
+	// Importante para manter estatisticas.
+	private final int numeroDeCanais;
+	private int canaisDisponiveis;
+	//TODO: Verificar em como manter a estátistica. 
+	private double taxaMediaOcupacao;
+
+	public Celula(String nome, int canais) {
+		this.nome = nome;
+		this.numeroDeCanais = canais;
+		this.canaisDisponiveis = canais;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public int getNumeroDeCanais() {
+		return numeroDeCanais;
+	}
+
+	public int getCanaisDisponiveis() {
+		return this.canaisDisponiveis;
+	}
+
+	public double getTaxaMediaOcupacao() {
+		return this.taxaMediaOcupacao;
+	}
+
+	/**
+	 * @return True caso tenha canal disponível
+	 */
+	public boolean ocuparCanal() {
+		if (canaisDisponiveis >= 1) {
+			canaisDisponiveis--;
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Método para evitar a situação em que o número de canais disponível seja maior que o número de canais 
+	 * @return True quando ocorrer desocupação de canal
+	 */
+	public boolean desocuparCanal() {
+		if (canaisDisponiveis < numeroDeCanais) {
+			canaisDisponiveis++;
+			return true;
+		}
+		return false;
+	}
 
 }
