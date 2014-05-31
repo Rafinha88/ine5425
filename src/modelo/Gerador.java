@@ -119,7 +119,7 @@ public class Gerador {
         
         public Chegada gerarProximaChegadaC2(long tempo) {
             Chegada proximaChegadaC2;
-            Chamada chamadaEmC2 = gerarChamadaEmC1(tempo);
+            Chamada chamadaEmC2 = gerarChamadaEmC2(tempo);
             
             long tempoDaProximaChegadaC2 = tempo + (long) funcaoTempoC2.sample();
             proximaChegadaC2 = new Chegada(chamadaEmC2, tempoDaProximaChegadaC2);

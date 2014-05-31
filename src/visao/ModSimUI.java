@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package visao;
 
 import javax.swing.JOptionPane;
@@ -13,6 +12,87 @@ public class ModSimUI extends javax.swing.JFrame {
     /**
      * Creates new form ModSimUI
      */
+    int frequenciaC1C1;
+    int frequenciaC1C2;
+    int frequenciaC1FA;
+
+    int frequenciaC2C1;
+    int frequenciaC2C2;
+    int frequenciaC2FA;
+
+    int canaisC1;
+    int canaisC2;
+
+    int mediaFuncaoTempoC1;
+    int mediaFuncaoTempoC2;
+
+    String distribuicaoDuracao;
+    double parametro1;
+    double parametro2;
+    double parametro3;
+
+    long tempoSimulacao;
+
+    public int getFrequenciaC1C1() {
+        return frequenciaC1C1;
+    }
+
+    public int getFrequenciaC1C2() {
+        return frequenciaC1C2;
+    }
+
+    public int getFrequenciaC1FA() {
+        return frequenciaC1FA;
+    }
+
+    public int getFrequenciaC2C1() {
+        return frequenciaC2C1;
+    }
+
+    public int getFrequenciaC2C2() {
+        return frequenciaC2C2;
+    }
+
+    public int getFrequenciaC2FA() {
+        return frequenciaC2FA;
+    }
+
+    public int getCanaisC1() {
+        return canaisC1;
+    }
+
+    public int getCanaisC2() {
+        return canaisC2;
+    }
+
+    public int getMediaFuncaoTempoC1() {
+        return mediaFuncaoTempoC1;
+    }
+
+    public int getMediaFuncaoTempoC2() {
+        return mediaFuncaoTempoC2;
+    }
+
+    public String getDistribuicaoDuracao() {
+        return distribuicaoDuracao;
+    }
+
+    public double getParametro1() {
+        return parametro1;
+    }
+
+    public double getParametro2() {
+        return parametro2;
+    }
+
+    public double getParametro3() {
+        return parametro3;
+    }
+
+    public long getTempoSimulacao() {
+        return tempoSimulacao;
+    }
+    
     public ModSimUI() {
         initComponents();
     }
@@ -31,21 +111,21 @@ public class ModSimUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        tFrequenciaC1C1 = new javax.swing.JTextField();
+        tFrequenciaC1C2 = new javax.swing.JTextField();
+        tFrequenciaC1FA = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        tFrequenciaC2C1 = new javax.swing.JTextField();
+        tFrequenciaC2C2 = new javax.swing.JTextField();
+        tFrequenciaC2FA = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        tCanaisC1 = new javax.swing.JTextField();
+        tCanaisC2 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -53,19 +133,19 @@ public class ModSimUI extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        tMediaFuncaoTempoC1 = new javax.swing.JTextField();
+        tMediaFuncaoTempoC2 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        tDistribuicaoDuracao = new javax.swing.JComboBox();
         jLabel17 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
+        tParametro1 = new javax.swing.JTextField();
+        tParametro2 = new javax.swing.JTextField();
+        tParametro3 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        tTempoSimulacao = new javax.swing.JTextField();
+        botaoIniciar = new javax.swing.JButton();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -98,15 +178,15 @@ public class ModSimUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tFrequenciaC1C1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2))
+                        .addComponent(tFrequenciaC1C2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField3)))
+                        .addComponent(tFrequenciaC1FA)))
                 .addContainerGap(105, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -115,23 +195,23 @@ public class ModSimUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tFrequenciaC1C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tFrequenciaC1C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tFrequenciaC1FA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Frequencia de Chamadas de C2"));
 
-        jLabel4.setText("C2C2");
+        jLabel4.setText("C2C1");
 
-        jLabel5.setText("C2C1");
+        jLabel5.setText("C2C2");
 
         jLabel6.setText("C2FA");
 
@@ -145,15 +225,15 @@ public class ModSimUI extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tFrequenciaC2C1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField5))
+                        .addComponent(tFrequenciaC2C2))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField6)))
+                        .addComponent(tFrequenciaC2FA)))
                 .addContainerGap(105, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -162,15 +242,15 @@ public class ModSimUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tFrequenciaC2C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tFrequenciaC2C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tFrequenciaC2FA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -190,11 +270,11 @@ public class ModSimUI extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tCanaisC1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField8)))
+                        .addComponent(tCanaisC2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -203,11 +283,11 @@ public class ModSimUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tCanaisC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tCanaisC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -229,10 +309,10 @@ public class ModSimUI extends javax.swing.JFrame {
 
         jLabel16.setText("Distribuicao");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Triangular", "Uniforme", "Exponencial", "Normal", "Constante" }));
-        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+        tDistribuicaoDuracao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Triangular", "Uniforme", "Exponencial", "Normal", "Constante" }));
+        tDistribuicaoDuracao.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBox1ItemStateChanged(evt);
+                tDistribuicaoDuracaoItemStateChanged(evt);
             }
         });
 
@@ -260,26 +340,26 @@ public class ModSimUI extends javax.swing.JFrame {
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel17)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField10))
+                                        .addComponent(tMediaFuncaoTempoC2))
                                     .addComponent(jLabel11)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel12)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(tMediaFuncaoTempoC1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel16)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tDistribuicaoDuracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tParametro1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tParametro2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tParametro3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 73, Short.MAX_VALUE))))
         );
         jPanel4Layout.setVerticalGroup(
@@ -294,31 +374,31 @@ public class ModSimUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tMediaFuncaoTempoC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tMediaFuncaoTempoC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tDistribuicaoDuracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tParametro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tParametro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tParametro3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jLabel18.setText("Tempo de Simulação");
 
-        jButton1.setText("Iniciar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoIniciar.setText("Iniciar");
+        botaoIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoIniciarActionPerformed(evt);
             }
         });
 
@@ -330,9 +410,9 @@ public class ModSimUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel18)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tTempoSimulacao, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(botaoIniciar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -341,8 +421,8 @@ public class ModSimUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(tTempoSimulacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoIniciar))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
 
@@ -385,60 +465,86 @@ public class ModSimUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+    private void tDistribuicaoDuracaoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_tDistribuicaoDuracaoItemStateChanged
         // TODO add your handling code here:
-        String distribuicaoDuracao = evt.getItem().toString();
-        switch(distribuicaoDuracao) {
-            case "Triangular" : jTextField11.setEnabled(true);jTextField12.setEnabled(true); jTextField13.setEnabled(true);
-            break;
-            case "Normal" : jTextField11.setEnabled(true); jTextField12.setEnabled(true); jTextField13.setEnabled(false);
-            break;
-            case "Uniforme" : jTextField11.setEnabled(true); jTextField12.setEnabled(true); jTextField13.setEnabled(false);
-            break;
-            case "Exponencial" : jTextField11.setEnabled(true); jTextField12.setEnabled(false); jTextField13.setEnabled(false);
-            break;
-            case "Constante" : jTextField11.setEnabled(true); jTextField12.setEnabled(false); jTextField13.setEnabled(false);
-            break;
+        distribuicaoDuracao = evt.getItem().toString();
+        switch (distribuicaoDuracao) {
+            case "Triangular":
+                tParametro1.setEnabled(true);
+                tParametro2.setEnabled(true);
+                tParametro3.setEnabled(true);
+                break;
+            case "Normal":
+                tParametro1.setEnabled(true);
+                tParametro2.setEnabled(true);
+                tParametro3.setEnabled(false);
+                break;
+            case "Uniforme":
+                tParametro1.setEnabled(true);
+                tParametro2.setEnabled(true);
+                tParametro3.setEnabled(false);
+                break;
+            case "Exponencial":
+                tParametro1.setEnabled(true);
+                tParametro2.setEnabled(false);
+                tParametro3.setEnabled(false);
+                break;
+            case "Constante":
+                tParametro1.setEnabled(true);
+                tParametro2.setEnabled(false);
+                tParametro3.setEnabled(false);
+                break;
         }
-        
-    }//GEN-LAST:event_jComboBox1ItemStateChanged
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_tDistribuicaoDuracaoItemStateChanged
+
+    private void botaoIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIniciarActionPerformed
         // TODO add your handling code here:
-        String estadoBotao = jButton1.getText();
+        this.frequenciaC1C1 = Integer.parseInt(tFrequenciaC1C1.getText() );
+        this.frequenciaC1C2 = Integer.parseInt(tFrequenciaC1C2.getText() );
+        this.frequenciaC1FA = Integer.parseInt(tFrequenciaC1FA.getText() );
+        this.frequenciaC2C1 = Integer.parseInt(tFrequenciaC2C1.getText() );
+        this.frequenciaC2C2 = Integer.parseInt(tFrequenciaC2C2.getText() );
+        this.frequenciaC2FA = Integer.parseInt(tFrequenciaC2FA.getText() );
+        this.canaisC1 = Integer.parseInt(tCanaisC1.getText() );
+        this.canaisC2 = Integer.parseInt(tCanaisC2.getText() );
+        this.mediaFuncaoTempoC1 = Integer.parseInt(tMediaFuncaoTempoC1.getText() );
+        this.mediaFuncaoTempoC2 = Integer.parseInt(tMediaFuncaoTempoC2.getText() );
+        this.distribuicaoDuracao = tDistribuicaoDuracao.getSelectedItem().toString();
+        this.parametro1 = Double.parseDouble(tParametro1.getText() );
+        this.parametro2 = Double.parseDouble(tParametro2.getText() );
+        this.parametro3 = Double.parseDouble(tParametro3.getText() );
+        this.tempoSimulacao = Integer.parseInt(tTempoSimulacao.getText() );
         
-        if(estadoBotao.equalsIgnoreCase("Iniciar")) {
-            if( ! verificarTempoDeSimulacao() )
-                jButton1.setText("Pausar");
+        String estadoBotao = botaoIniciar.getText();
+
+        if (estadoBotao.equalsIgnoreCase("Iniciar")) {
+            if (!verificarTempoDeSimulacao()) {
+                botaoIniciar.setText("Pausar");
+            }
         }
-        if(estadoBotao.equalsIgnoreCase("Pausar")) {
-            jButton1.setText("Iniciar");
+        if (estadoBotao.equalsIgnoreCase("Pausar")) {
+            botaoIniciar.setText("Iniciar");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botaoIniciarActionPerformed
 
     public boolean verificarTempoDeSimulacao() {
-        if( jTextField14.getText().isEmpty() ) {
-            JOptionPane.showMessageDialog(null, "O tempo de simulacao deve ser definido", "Erro no Tempo",JOptionPane.ERROR_MESSAGE);
+        if (tTempoSimulacao.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "O tempo de simulacao deve ser definido", "Erro no Tempo", JOptionPane.ERROR_MESSAGE);
             return true;
         }
         return false;
     }
-    
-    
+
     public void verificarFrequencia() {
-        int frequenciaC1C1 = Integer.parseInt( jTextField1.getText() );
-        int frequenciaC1C2 = Integer.parseInt( jTextField2.getText() );
-        int frequenciaC1FA = Integer.parseInt( jTextField3.getText() );
-        
-        if(frequenciaC1C1 + frequenciaC1C2 + frequenciaC1FA != 100)
-            JOptionPane.showMessageDialog(null, "A soma da frequencia deve ser 100%", "Erro na Frequencia",JOptionPane.ERROR_MESSAGE);
-   
-        int frequenciaC2C1 = Integer.parseInt( jTextField4.getText() );
-        int frequenciaC2C2 = Integer.parseInt( jTextField5.getText() );
-        int frequenciaC2FA = Integer.parseInt( jTextField6.getText() );
-        
-        if(frequenciaC2C1 + frequenciaC2C2 + frequenciaC2FA != 100)
-            JOptionPane.showMessageDialog(null, "A soma da frequencia deve ser 100%", "Erro na Frequencia",JOptionPane.ERROR_MESSAGE);
+
+        if (frequenciaC1C1 + frequenciaC1C2 + frequenciaC1FA != 100) {
+            JOptionPane.showMessageDialog(null, "A soma da frequencia deve ser 100%", "Erro na Frequencia", JOptionPane.ERROR_MESSAGE);
+        }
+
+        if (frequenciaC2C1 + frequenciaC2C2 + frequenciaC2FA != 100) {
+            JOptionPane.showMessageDialog(null, "A soma da frequencia deve ser 100%", "Erro na Frequencia", JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 
@@ -478,8 +584,7 @@ public class ModSimUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton botaoIniciar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -504,19 +609,20 @@ public class ModSimUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField tCanaisC1;
+    private javax.swing.JTextField tCanaisC2;
+    private javax.swing.JComboBox tDistribuicaoDuracao;
+    private javax.swing.JTextField tFrequenciaC1C1;
+    private javax.swing.JTextField tFrequenciaC1C2;
+    private javax.swing.JTextField tFrequenciaC1FA;
+    private javax.swing.JTextField tFrequenciaC2C1;
+    private javax.swing.JTextField tFrequenciaC2C2;
+    private javax.swing.JTextField tFrequenciaC2FA;
+    private javax.swing.JTextField tMediaFuncaoTempoC1;
+    private javax.swing.JTextField tMediaFuncaoTempoC2;
+    private javax.swing.JTextField tParametro1;
+    private javax.swing.JTextField tParametro2;
+    private javax.swing.JTextField tParametro3;
+    private javax.swing.JTextField tTempoSimulacao;
     // End of variables declaration//GEN-END:variables
 }
