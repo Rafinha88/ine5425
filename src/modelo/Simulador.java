@@ -1,11 +1,6 @@
 package modelo;
 
-import modelo.Chegada;
-import modelo.Estatistica;
-import modelo.Evento;
-import modelo.Gerador;
-import modelo.ListaEncadeadaOrdenada;
-import modelo.Relogio;
+import org.apache.commons.math3.distribution.NormalDistribution;
 
 public class Simulador {
 
@@ -18,6 +13,8 @@ public class Simulador {
 	static ListaEncadeadaOrdenada<Evento> eventos;
 
 	static boolean pausado = false;
+
+	private static int numeroDePassosDeExecucao;
 
 	public static void main(String[] args) {
 		setup();
@@ -35,9 +32,14 @@ public class Simulador {
 	private static void loop() {
 		// TODO: Implementar pausa etc.
 		while (!pausado) {
-			avancarTempo();
-			executarEvento();
+			int contador = 0;
+			while (contador != numeroDePassosDeExecucao) {
+				avancarTempo();
+				executarEvento();
+				contador++;
+			}
 			mostrarEstatisticas();
+
 		}
 	}
 
