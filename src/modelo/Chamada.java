@@ -1,5 +1,8 @@
 package modelo;
 
+import modelo.Celula;
+import modelo.EstadoDaChamada;
+
 public class Chamada {
 
 	private Celula celulaOrigem;
@@ -18,19 +21,29 @@ public class Chamada {
 
 	public void iniciar() {
 		if (celulaOrigem.ocuparCanal()) {
+			estado = EstadoDaChamada.EXECUTANDO;
+		} else {
+			estado = EstadoDaChamada.SEM_CANAL;
+		}
+	}
 
+	public void trocarCelula() {
+		celulaOrigem.desocuparCanal();
+		if (celulaDestino != null) {
+			if (celulaDestino.ocuparCanal()) {
+				estado = EstadoDaChamada.EXECUTANDO;
+			} else {
+				estado = EstadoDaChamada.SEM_CANAL;
+			}
 		} else {
 			estado = EstadoDaChamada.SEM_SINAL;
 		}
 	}
 
 	public void finalizar() {
-		// Protege contra null do fora de área
-		if (celulaDestino != null) {
+		if (estado == EstadoDaChamada.EXECUTANDO) {
 			celulaDestino.desocuparCanal();
 			estado = EstadoDaChamada.SUCESSO;
-		} else {
-			estado = EstadoDaChamada.SEM_SINAL;
 		}
 	}
 
