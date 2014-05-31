@@ -25,7 +25,8 @@ public class Estatistica {
 	private static Estatistica instance;
 
 	private Estatistica() {
-
+		menorTempoDeChamada = 9999;
+		maiorTempoDeChamada = -1111;
 	}
 
 	public static Estatistica getInstance() {
