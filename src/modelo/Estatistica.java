@@ -25,8 +25,8 @@ public class Estatistica {
 	private static Estatistica instance;
 
 	private Estatistica() {
-		menorTempoDeChamada = 9999;
-		maiorTempoDeChamada = -1111;
+		menorTempoDeChamada = 0;
+		maiorTempoDeChamada = 0;
 	}
 
 	public static Estatistica getInstance() {
@@ -45,9 +45,9 @@ public class Estatistica {
 	 */
 	public void analisarTempoDaChamada(long tempo) {
 		numeroDeChamadasRealizadas++;
-		if (tempo < menorTempoDeChamada) {
+		if (tempo < menorTempoDeChamada | menorTempoDeChamada == 0) {
 			menorTempoDeChamada = tempo;
-		} else if (tempo > maiorTempoDeChamada) {
+		} else if (tempo > maiorTempoDeChamada | maiorTempoDeChamada == 0) {
 			maiorTempoDeChamada = tempo;
 		}
 		tempoTotalDeChamadas += tempo;

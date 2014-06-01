@@ -2,7 +2,9 @@ package modelo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
+
 import modelo.Chegada;
 import modelo.Estatistica;
 import modelo.Evento;
@@ -11,6 +13,7 @@ import modelo.ListaEncadeadaOrdenada;
 import modelo.Relogio;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
+
 import visao.ModSimUI;
 import visao.TelaDeExecucao;
 
@@ -50,6 +53,8 @@ public class Simulador {
 	static boolean pausado = false;
 
 	private static int numeroDePassosDeExecucao;
+	private static boolean iniciar;
+	static JButton botaoPausarResumir;
 
 	static private void setarVariaveisVisaoParaModelo() {
 		frequenciaC1C1 = visao.getFrequenciaC1C1();
@@ -79,21 +84,36 @@ public class Simulador {
 		visao = new ModSimUI();
 		visao.setVisible(true);
 		telaDeExecucao = new TelaDeExecucao();
-		telaDeExecucao.setVisible(false);
 		JButton botaoIniciar = visao.getBotaoIniciar();
 		botaoIniciar.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				visao.preprarVariaveis();
 				visao.setVisible(false);
-				visao.dispose();
+				visao.preprarVariaveis();
+
 				telaDeExecucao.setVisible(true);
-				telaDeExecucao.repaint();
-				iniciar();
+				new Thread(new Runnable() {
+					@Override
+					public void run() {
+						iniciar();
+					}
+				}).start();
+
 			}
 		});
+		botaoPausarResumir = telaDeExecucao.getBotaoPausarResumir();
+		botaoPausarResumir.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (pausado) {
+					pausado = false;
+				} else {
+					pausado = true;
+				}
+			}
+		});
 	}
 
 	private static void iniciar() {
@@ -128,22 +148,22 @@ public class Simulador {
 	}
 
 	private static void loop() {
-		while (!pausado) {
-			int contador = 0;
-			try {
-				Thread.sleep(340l);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				break;
+		while (true) {
+			while (!pausado) {
+				int contador = 0;
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					break;
+				}
+				while (contador != numeroDePassosDeExecucao) {
+					avancarTempo();
+					executarEvento();
+					contador++;
+				}
+				mostrarEstatisticas();
 			}
-			System.out.println("#######################");
-			while (contador != numeroDePassosDeExecucao) {
-				avancarTempo();
-				executarEvento();
-				contador++;
-			}
-			mostrarEstatisticas();
-			System.out.println("#######################");
 		}
 	}
 
@@ -178,18 +198,18 @@ public class Simulador {
 				String.valueOf(estatistica.getChamadasCompletadas()));
 		telaDeExecucao.getNumeroChamadasNoSistema().setText(
 				String.valueOf(estatistica.getChamadasNoSistema()));
-                telaDeExecucao.getNumeroMaiorTempoChamada().setText( 
-                                String.valueOf(estatistica.getMaiorTempoDeChamada()));
-                telaDeExecucao.getNumeroMenorTempoChamada().setText( 
-                                String.valueOf(estatistica.getMenorTempoDeChamada()));
-                telaDeExecucao.getNumeroPerdidasC1().setText(
-                                String.valueOf(estatistica.getChamadaPerdidaFaltaDeCanalC1()));
-                telaDeExecucao.getNumeroPerdidasC2().setText(
-                                String.valueOf(estatistica.getChamadaPerdidaFaltaDeCanalC2()));
-                telaDeExecucao.getNumeroPerdidasFA().setText(
-                                String.valueOf(estatistica.getChamadasSemSinal()));
-                telaDeExecucao.getNumeroTempoMedioChamada().setText(
-                                String.valueOf(estatistica.getTempoMedioDeChamada()));
-                
+		telaDeExecucao.getNumeroMaiorTempoChamada().setText(
+				String.valueOf(estatistica.getMaiorTempoDeChamada()));
+		telaDeExecucao.getNumeroMenorTempoChamada().setText(
+				String.valueOf(estatistica.getMenorTempoDeChamada()));
+		telaDeExecucao.getNumeroPerdidasC1().setText(
+				String.valueOf(estatistica.getChamadaPerdidaFaltaDeCanalC1()));
+		telaDeExecucao.getNumeroPerdidasC2().setText(
+				String.valueOf(estatistica.getChamadaPerdidaFaltaDeCanalC2()));
+		telaDeExecucao.getNumeroPerdidasFA().setText(
+				String.valueOf(estatistica.getChamadasSemSinal()));
+		telaDeExecucao.getNumeroTempoMedioChamada().setText(
+				String.valueOf(estatistica.getTempoMedioDeChamada()));
+
 	}
 }
