@@ -24,20 +24,20 @@ public class Saida extends Evento {
 		estatistica.decrementarNumeroDeChamadasNoSistema();
 		estatistica.analisarTempoDaChamada(getChamada().getDuracao());
 		switch (getChamada().getEstado()) {
-		case SEM_CANAL:
-			if (getChamada().getCelulaDestino() == CelulaSingletonBuilder
-					.getInstance().constroiOuGetC1()) {
-				estatistica.incrementarChamadaPerdidaFaltaDeCanalC1();
-			} else {
-				estatistica.incrementarChamadaPerdidaFaltaDeCanalC2();
-			}
-			break;
-		case SEM_SINAL:
-			estatistica.incrementarChamadasSemSinal();
-			break;
-		case SUCESSO:
-			estatistica.incrementarChamadasCompletadas();
-			break;
+                    case SEM_CANAL:
+                            if (getChamada().getCelulaDestino() == CelulaSingletonBuilder
+                                            .getInstance().constroiOuGetC1()) {
+                                    estatistica.incrementarChamadaPerdidaFaltaDeCanalC1();
+                            } else {
+                                    estatistica.incrementarChamadaPerdidaFaltaDeCanalC2();
+                            }
+                            break;
+                    case SEM_SINAL:
+                            estatistica.incrementarChamadasSemSinal();
+                            break;
+                    case SUCESSO:
+                            estatistica.incrementarChamadasCompletadas();
+                            break;
 		}
 	}
 

@@ -2,10 +2,7 @@ package modelo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
-
-import visao.ModSimUI;
 import modelo.Chegada;
 import modelo.Estatistica;
 import modelo.Evento;
@@ -14,6 +11,8 @@ import modelo.ListaEncadeadaOrdenada;
 import modelo.Relogio;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
+import visao.ModSimUI;
+import visao.TelaDeExecucao;
 
 public class Simulador {
 
@@ -46,6 +45,7 @@ public class Simulador {
 
 	static long tempoSimulacao;
 	static ModSimUI visao;
+        TelaDeExecucao segundaVisao;
 
 	static boolean pausado = false;
 
@@ -151,6 +151,7 @@ public class Simulador {
 	private static void mostrarEstatisticas() {
 		System.out.println("Chamadas completadas : "
 				+ estatistica.getChamadasCompletadas());
+                
 	}
 
 }
