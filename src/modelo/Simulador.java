@@ -45,7 +45,7 @@ public class Simulador {
 
 	static long tempoSimulacao;
 	static ModSimUI visao;
-	TelaDeExecucao segundaVisao;
+	static TelaDeExecucao telaDeExecucao;
 
 	static boolean pausado = false;
 
@@ -78,12 +78,18 @@ public class Simulador {
 	public static void main(String[] args) {
 		visao = new ModSimUI();
 		visao.setVisible(true);
+		telaDeExecucao = new TelaDeExecucao();
+		telaDeExecucao.setVisible(false);
 		JButton botaoIniciar = visao.getBotaoIniciar();
 		botaoIniciar.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				visao.preprarVariaveis();
+				visao.setVisible(false);
+				visao.dispose();
+				telaDeExecucao.setVisible(true);
+				telaDeExecucao.repaint();
 				iniciar();
 			}
 		});
@@ -125,7 +131,7 @@ public class Simulador {
 		while (!pausado) {
 			int contador = 0;
 			try {
-				Thread.sleep(40l);
+				Thread.sleep(340l);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				break;
@@ -167,22 +173,10 @@ public class Simulador {
 	}
 
 	private static void mostrarEstatisticas() {
-		System.out.println("Chamadas completadas : "
-				+ estatistica.getChamadasCompletadas());
-		System.out.println("Chamadas no sistema : "
-				+ estatistica.getChamadasNoSistema());
-		System.out.println("Chamadas perdidas por falta do canal 1 : "
-				+ estatistica.getChamadaPerdidaFaltaDeCanalC1());
-		System.out.println("Chamadas perdidas por falta do canal 2 : "
-				+ estatistica.getChamadaPerdidaFaltaDeCanalC2());
-		System.out.println("Tempo m�dio de chamadas: "
-				+ estatistica.getTempoMedioDeChamada());
-		System.out.println("Tempo total de chamadas: "
-				+ estatistica.getTempoTotalDeChamadas());
-		System.out.println("Maior tempo de chamada: "
-				+ estatistica.getMaiorTempoDeChamada());
-		System.out.println("Menor tempo de chamada: "
-				+ estatistica.getMenorTempoDeChamada());
+		telaDeExecucao.repaint();
+		telaDeExecucao.getNumeroChamadasCompletadas().setText(
+				String.valueOf(estatistica.getChamadasCompletadas()));
+		telaDeExecucao.getNumeroChamadasNoSistema().setText(
+				String.valueOf(estatistica.getChamadasNoSistema()));
 	}
-
 }
