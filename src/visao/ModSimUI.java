@@ -875,12 +875,9 @@ public class ModSimUI extends javax.swing.JFrame {
 		this.frequenciaC2FA = Integer.parseInt(tFrequenciaC2FA.getText());
 		this.canaisC1 = Integer.parseInt(tCanaisC1.getText());
 		this.canaisC2 = Integer.parseInt(tCanaisC2.getText());
-		this.mediaFuncaoTempoC1 = Integer.parseInt(tMediaFuncaoTempoC1
-				.getText());
-		this.mediaFuncaoTempoC2 = Integer.parseInt(tMediaFuncaoTempoC2
-				.getText());
-		this.distribuicaoDuracao = tDistribuicaoDuracao.getSelectedItem()
-				.toString();
+		this.mediaFuncaoTempoC1 = Integer.parseInt(tMediaFuncaoTempoC1.getText());
+		this.mediaFuncaoTempoC2 = Integer.parseInt(tMediaFuncaoTempoC2.getText());
+		this.distribuicaoDuracao = tDistribuicaoDuracao.getSelectedItem().toString();
 		this.parametro1 = Double.parseDouble(tParametro1.getText());
 		this.parametro2 = Double.parseDouble(tParametro2.getText());
 		this.parametro3 = Double.parseDouble(tParametro3.getText());

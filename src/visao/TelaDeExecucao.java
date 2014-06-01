@@ -58,329 +58,202 @@ public class TelaDeExecucao extends javax.swing.JFrame {
 	 */
 	@SuppressWarnings("unchecked")
 	// <editor-fold defaultstate="collapsed"
-	// desc="Generated Code">//GEN-BEGIN:initComponents
-	private void initComponents() {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
-		panelEstatisticas = new javax.swing.JPanel();
-		jLabel1 = new javax.swing.JLabel();
-		numeroChamadasNoSistema = new javax.swing.JLabel();
-		jLabel3 = new javax.swing.JLabel();
-		numeroChamadasCompletadas = new javax.swing.JLabel();
-		jLabel5 = new javax.swing.JLabel();
-		numeroMenorTempoChamada = new javax.swing.JLabel();
-		jLabel7 = new javax.swing.JLabel();
-		numeroTempoMedioChamada = new javax.swing.JLabel();
-		jLabel9 = new javax.swing.JLabel();
-		numeroMaiorTempoChamada = new javax.swing.JLabel();
-		jLabel11 = new javax.swing.JLabel();
-		numeroPerdidasC1 = new javax.swing.JLabel();
-		jLabel13 = new javax.swing.JLabel();
-		numeroPerdidasC2 = new javax.swing.JLabel();
-		jLabel15 = new javax.swing.JLabel();
-		numeroPerdidasFA = new javax.swing.JLabel();
-		jPanel2 = new javax.swing.JPanel();
-		botaoPausarResumir = new javax.swing.JButton();
-		jLabel17 = new javax.swing.JLabel();
-		botaoAvancar = new javax.swing.JButton();
-		jComboBox1 = new javax.swing.JComboBox();
+        panelEstatisticas = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        numeroChamadasNoSistema = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        numeroChamadasCompletadas = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        numeroMenorTempoChamada = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        numeroTempoMedioChamada = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        numeroMaiorTempoChamada = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        numeroPerdidasC1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        numeroPerdidasC2 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        numeroPerdidasFA = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        botaoPausarResumir = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        botaoAvancar = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
 
-		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-		panelEstatisticas.setBorder(javax.swing.BorderFactory
-				.createTitledBorder("Estatisticas"));
+        panelEstatisticas.setBorder(javax.swing.BorderFactory.createTitledBorder("Estatisticas"));
 
-		jLabel1.setText("Chamadas no sistema");
+        jLabel1.setText("Chamadas no sistema");
 
-		numeroChamadasNoSistema.setText("numeroChamadasNoSistema");
+        numeroChamadasNoSistema.setText("0");
 
-		jLabel3.setText("Chamadas completadas");
+        jLabel3.setText("Chamadas completadas");
 
-		numeroChamadasCompletadas.setText("numeroChamadasCompletadas");
+        numeroChamadasCompletadas.setText("0");
 
-		jLabel5.setText("Menor tempo das chamadas");
+        jLabel5.setText("Menor tempo das chamadas");
 
-		numeroMenorTempoChamada.setText("numeroMenorTempoChamada");
+        numeroMenorTempoChamada.setText("0");
 
-		jLabel7.setText("Tempo medio das chamadas");
+        jLabel7.setText("Tempo medio das chamadas");
 
-		numeroTempoMedioChamada.setText("numeroTempoMedioChamada");
+        numeroTempoMedioChamada.setText("0");
 
-		jLabel9.setText("Maior tempo das chamadas");
+        jLabel9.setText("Maior tempo das chamadas");
 
-		numeroMaiorTempoChamada.setText("numeroMaiorTempoChamada");
+        numeroMaiorTempoChamada.setText("0");
 
-		jLabel11.setText("Chamadas perdidas celula 1");
+        jLabel11.setText("Chamadas perdidas celula 1");
 
-		numeroPerdidasC1.setText("numeroPerdidasC1");
+        numeroPerdidasC1.setText("0");
 
-		jLabel13.setText("Chamadas perdidas celula 2");
+        jLabel13.setText("Chamadas perdidas celula 2");
 
-		numeroPerdidasC2.setText("numeroPerdidasC2");
+        numeroPerdidasC2.setText("0");
 
-		jLabel15.setText("Chamadas perdidas fora de area");
+        jLabel15.setText("Chamadas perdidas fora de area");
 
-		numeroPerdidasFA.setText("numeroPerdidasFA");
+        numeroPerdidasFA.setText("0");
 
-		javax.swing.GroupLayout panelEstatisticasLayout = new javax.swing.GroupLayout(
-				panelEstatisticas);
-		panelEstatisticas.setLayout(panelEstatisticasLayout);
-		panelEstatisticasLayout
-				.setHorizontalGroup(panelEstatisticasLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								panelEstatisticasLayout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																panelEstatisticasLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel1)
-																		.addGap(18,
-																				18,
-																				18)
-																		.addComponent(
-																				numeroChamadasNoSistema))
-														.addGroup(
-																panelEstatisticasLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel3)
-																		.addGap(18,
-																				18,
-																				18)
-																		.addComponent(
-																				numeroChamadasCompletadas))
-														.addGroup(
-																panelEstatisticasLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel5)
-																		.addGap(18,
-																				18,
-																				18)
-																		.addComponent(
-																				numeroMenorTempoChamada))
-														.addGroup(
-																panelEstatisticasLayout
-																		.createSequentialGroup()
-																		.addGroup(
-																				panelEstatisticasLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
-																						.addComponent(
-																								jLabel7)
-																						.addComponent(
-																								jLabel9)
-																						.addComponent(
-																								jLabel11)
-																						.addComponent(
-																								jLabel13))
-																		.addGap(18,
-																				18,
-																				18)
-																		.addGroup(
-																				panelEstatisticasLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
-																						.addComponent(
-																								numeroPerdidasC2)
-																						.addComponent(
-																								numeroPerdidasC1)
-																						.addComponent(
-																								numeroMaiorTempoChamada)
-																						.addComponent(
-																								numeroTempoMedioChamada)))
-														.addGroup(
-																panelEstatisticasLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel15)
-																		.addGap(18,
-																				18,
-																				18)
-																		.addComponent(
-																				numeroPerdidasFA)))
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
-		panelEstatisticasLayout
-				.setVerticalGroup(panelEstatisticasLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								panelEstatisticasLayout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel1)
-														.addComponent(
-																numeroChamadasNoSistema))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel3)
-														.addComponent(
-																numeroChamadasCompletadas))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel5)
-														.addComponent(
-																numeroMenorTempoChamada))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel7)
-														.addComponent(
-																numeroTempoMedioChamada))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel9)
-														.addComponent(
-																numeroMaiorTempoChamada))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel11)
-														.addComponent(
-																numeroPerdidasC1))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel13)
-														.addComponent(
-																numeroPerdidasC2))
-										.addGap(18, 18, 18)
-										.addGroup(
-												panelEstatisticasLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel15)
-														.addComponent(
-																numeroPerdidasFA))
-										.addContainerGap(61, Short.MAX_VALUE)));
+        javax.swing.GroupLayout panelEstatisticasLayout = new javax.swing.GroupLayout(panelEstatisticas);
+        panelEstatisticas.setLayout(panelEstatisticasLayout);
+        panelEstatisticasLayout.setHorizontalGroup(
+            panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEstatisticasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelEstatisticasLayout.createSequentialGroup()
+                        .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel15))
+                        .addGap(29, 29, 29)
+                        .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(numeroMaiorTempoChamada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numeroTempoMedioChamada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numeroPerdidasC1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numeroPerdidasC2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numeroPerdidasFA, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+                    .addGroup(panelEstatisticasLayout.createSequentialGroup()
+                        .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
+                        .addGap(54, 54, 54)
+                        .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(numeroChamadasCompletadas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numeroChamadasNoSistema, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numeroMenorTempoChamada, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelEstatisticasLayout.setVerticalGroup(
+            panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEstatisticasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(numeroChamadasNoSistema))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(numeroChamadasCompletadas))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(numeroMenorTempoChamada))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(numeroTempoMedioChamada))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(numeroMaiorTempoChamada))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(numeroPerdidasC1))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(numeroPerdidasC2))
+                .addGap(18, 18, 18)
+                .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(numeroPerdidasFA))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
 
-		botaoPausarResumir.setText("Pausar");
-		botaoPausarResumir
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						botaoPausarResumirActionPerformed(evt);
-					}
-				});
+        botaoPausarResumir.setText("Pausar");
+        botaoPausarResumir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoPausarResumirActionPerformed(evt);
+            }
+        });
 
-		jLabel17.setText("Velocidade de Execucao");
+        jLabel17.setText("Velocidade de Execucao");
 
-		botaoAvancar.setText("Avancar");
+        botaoAvancar.setText("Avancar");
 
-		jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] {
-				"1 Passo", "3 Passos", "5 Passos" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Passo", "3 Passos", "5 Passos" }));
 
-		javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(
-				jPanel2);
-		jPanel2.setLayout(jPanel2Layout);
-		jPanel2Layout.setHorizontalGroup(jPanel2Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-				jPanel2Layout
-						.createSequentialGroup()
-						.addContainerGap()
-						.addComponent(botaoPausarResumir,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 100,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addGap(18, 18, 18)
-						.addComponent(jLabel17)
-						.addGap(18, 18, 18)
-						.addComponent(jComboBox1,
-								javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addGap(18, 18, 18).addComponent(botaoAvancar)
-						.addContainerGap(133, Short.MAX_VALUE)));
-		jPanel2Layout
-				.setVerticalGroup(jPanel2Layout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								jPanel2Layout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												jPanel2Layout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																botaoPausarResumir)
-														.addComponent(jLabel17)
-														.addComponent(
-																botaoAvancar)
-														.addComponent(
-																jComboBox1,
-																javax.swing.GroupLayout.PREFERRED_SIZE,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.PREFERRED_SIZE))
-										.addContainerGap(125, Short.MAX_VALUE)));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(botaoPausarResumir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botaoAvancar)
+                .addContainerGap(133, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoPausarResumir)
+                    .addComponent(jLabel17)
+                    .addComponent(botaoAvancar)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(125, Short.MAX_VALUE))
+        );
 
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
-				getContentPane());
-		getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(
-						javax.swing.GroupLayout.Alignment.TRAILING,
-						layout.createSequentialGroup()
-								.addContainerGap()
-								.addGroup(
-										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.TRAILING)
-												.addComponent(
-														jPanel2,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														Short.MAX_VALUE)
-												.addComponent(
-														panelEstatisticas,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														Short.MAX_VALUE))
-								.addContainerGap()));
-		layout.setVerticalGroup(layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-				layout.createSequentialGroup()
-						.addContainerGap()
-						.addComponent(panelEstatisticas,
-								javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addGap(18, 18, 18)
-						.addComponent(jPanel2,
-								javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addContainerGap(71, Short.MAX_VALUE)));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelEstatisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelEstatisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
 
-		pack();
-	}// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
 	private void botaoPausarResumirActionPerformed(
 			java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botaoPausarResumirActionPerformed
@@ -437,28 +310,28 @@ public class TelaDeExecucao extends javax.swing.JFrame {
 		});
 	}
 
-	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JButton botaoAvancar;
-	private javax.swing.JButton botaoPausarResumir;
-	private javax.swing.JComboBox jComboBox1;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel11;
-	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel15;
-	private javax.swing.JLabel jLabel17;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel5;
-	private javax.swing.JLabel jLabel7;
-	private javax.swing.JLabel jLabel9;
-	private javax.swing.JPanel jPanel2;
-	private javax.swing.JLabel numeroChamadasCompletadas;
-	private javax.swing.JLabel numeroChamadasNoSistema;
-	private javax.swing.JLabel numeroMaiorTempoChamada;
-	private javax.swing.JLabel numeroMenorTempoChamada;
-	private javax.swing.JLabel numeroPerdidasC1;
-	private javax.swing.JLabel numeroPerdidasC2;
-	private javax.swing.JLabel numeroPerdidasFA;
-	private javax.swing.JLabel numeroTempoMedioChamada;
-	private javax.swing.JPanel panelEstatisticas;
-	// End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoAvancar;
+    private javax.swing.JButton botaoPausarResumir;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel numeroChamadasCompletadas;
+    private javax.swing.JLabel numeroChamadasNoSistema;
+    private javax.swing.JLabel numeroMaiorTempoChamada;
+    private javax.swing.JLabel numeroMenorTempoChamada;
+    private javax.swing.JLabel numeroPerdidasC1;
+    private javax.swing.JLabel numeroPerdidasC2;
+    private javax.swing.JLabel numeroPerdidasFA;
+    private javax.swing.JLabel numeroTempoMedioChamada;
+    private javax.swing.JPanel panelEstatisticas;
+    // End of variables declaration//GEN-END:variables
 }

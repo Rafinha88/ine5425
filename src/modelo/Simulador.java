@@ -178,5 +178,18 @@ public class Simulador {
 				String.valueOf(estatistica.getChamadasCompletadas()));
 		telaDeExecucao.getNumeroChamadasNoSistema().setText(
 				String.valueOf(estatistica.getChamadasNoSistema()));
+                telaDeExecucao.getNumeroMaiorTempoChamada().setText( 
+                                String.valueOf(estatistica.getMaiorTempoDeChamada()));
+                telaDeExecucao.getNumeroMenorTempoChamada().setText( 
+                                String.valueOf(estatistica.getMenorTempoDeChamada()));
+                telaDeExecucao.getNumeroPerdidasC1().setText(
+                                String.valueOf(estatistica.getChamadaPerdidaFaltaDeCanalC1()));
+                telaDeExecucao.getNumeroPerdidasC2().setText(
+                                String.valueOf(estatistica.getChamadaPerdidaFaltaDeCanalC2()));
+                telaDeExecucao.getNumeroPerdidasFA().setText(
+                                String.valueOf(estatistica.getChamadasSemSinal()));
+                telaDeExecucao.getNumeroTempoMedioChamada().setText(
+                                String.valueOf(estatistica.getTempoMedioDeChamada()));
+                
 	}
 }

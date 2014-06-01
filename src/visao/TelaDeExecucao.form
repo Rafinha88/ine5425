@@ -62,39 +62,34 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="numeroChamadasNoSistema" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="numeroChamadasCompletadas" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="numeroMenorTempoChamada" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="numeroPerdidasC2" min="-2" max="-2" attributes="0"/>
-                              <Component id="numeroPerdidasC1" min="-2" max="-2" attributes="0"/>
-                              <Component id="numeroMaiorTempoChamada" min="-2" max="-2" attributes="0"/>
-                              <Component id="numeroTempoMedioChamada" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="numeroMaiorTempoChamada" alignment="0" max="32767" attributes="0"/>
+                              <Component id="numeroTempoMedioChamada" alignment="1" max="32767" attributes="0"/>
+                              <Component id="numeroPerdidasC1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="numeroPerdidasC2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="numeroPerdidasFA" alignment="0" pref="150" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="numeroPerdidasFA" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="numeroChamadasCompletadas" alignment="0" max="32767" attributes="0"/>
+                              <Component id="numeroChamadasNoSistema" alignment="0" max="32767" attributes="0"/>
+                              <Component id="numeroMenorTempoChamada" pref="150" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -157,7 +152,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroChamadasNoSistema">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroChamadasNoSistema"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -167,7 +162,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroChamadasCompletadas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroChamadasCompletadas"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -177,7 +172,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroMenorTempoChamada">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroMenorTempoChamada"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
@@ -187,7 +182,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroTempoMedioChamada">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroTempoMedioChamada"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
@@ -197,7 +192,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroMaiorTempoChamada">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroMaiorTempoChamada"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
@@ -207,7 +202,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroPerdidasC1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroPerdidasC1"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel13">
@@ -217,7 +212,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroPerdidasC2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroPerdidasC2"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel15">
@@ -227,7 +222,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="numeroPerdidasFA">
           <Properties>
-            <Property name="text" type="java.lang.String" value="numeroPerdidasFA"/>
+            <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
         </Component>
       </SubComponents>
