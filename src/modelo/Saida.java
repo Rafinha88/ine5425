@@ -28,14 +28,18 @@ public class Saida extends Evento {
 			if (getChamada().getCelulaDestino() == CelulaSingletonBuilder
 					.getInstance().constroiOuGetC1()) {
 				estatistica.incrementarChamadaPerdidaFaltaDeCanalC1();
+				System.out.printf("Saida | SEM CANAL C1\n");
 			} else {
 				estatistica.incrementarChamadaPerdidaFaltaDeCanalC2();
+				System.out.printf("Saida | SEM CANAL C2\n");
 			}
 			break;
 		case SEM_SINAL:
+			System.out.printf("Saida | SEM SINAL chamado\n");
 			estatistica.incrementarChamadasSemSinal();
 			break;
 		case SUCESSO:
+			System.out.printf("Saida | SUCESSO chamado\n");
 			estatistica.incrementarChamadasCompletadas();
 			break;
 		}

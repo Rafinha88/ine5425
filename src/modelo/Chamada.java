@@ -20,6 +20,7 @@ public class Chamada {
 	}
 
 	public void iniciar() {
+		System.out.printf("Chamada | Iniciando \n");
 		if (celulaOrigem.ocuparCanal()) {
 			estado = EstadoDaChamada.EXECUTANDO;
 		} else {
@@ -28,6 +29,7 @@ public class Chamada {
 	}
 
 	public void trocarCelula() {
+		System.out.printf("Chamada | Trocando Celula \n");
 		celulaOrigem.desocuparCanal();
 		if (celulaDestino != null) {
 			if (celulaDestino.ocuparCanal()) {
@@ -41,6 +43,7 @@ public class Chamada {
 	}
 
 	public void finalizar() {
+		System.out.printf("Chamada | Finalizando \n");
 		if (estado == EstadoDaChamada.EXECUTANDO) {
 			celulaDestino.desocuparCanal();
 			estado = EstadoDaChamada.SUCESSO;
