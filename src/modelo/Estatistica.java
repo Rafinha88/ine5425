@@ -19,8 +19,11 @@ public class Estatistica {
 
 	private long taxaMediaDeOcupacaoDeC1;
 	private long taxaMediaDeOcupacaoDeC2;
+        
+        private long maiorNumeroDeChamadasNoSistema;
+        private long mediaDeChamadasNoSistema;
 
-	// Estes dois atributos são essenciais para calcular o tempo médio de
+	// Estes dois atributos sï¿½o essenciais para calcular o tempo mï¿½dio de
 	// chamada.
 	private long tempoTotalDeChamadas;
 	private int numeroDeChamadasRealizadas;
@@ -48,6 +51,7 @@ public class Estatistica {
 	private Estatistica() {
 		menorTempoDeChamada = 0;
 		maiorTempoDeChamada = 0;
+                maiorNumeroDeChamadasNoSistema = 0;
 	}
 
 	public static Estatistica getInstance() {
@@ -58,9 +62,9 @@ public class Estatistica {
 	}
 
 	/**
-	 * Verifica se o tempo é algum dos extremos. O menor tempo de chamada ou o
-	 * maior. Também calcula o tempo médio da chamada utilizando um contador
-	 * para numero de chamadas já feitas e o tempo total de chamadas
+	 * Verifica se o tempo ï¿½ algum dos extremos. O menor tempo de chamada ou o
+	 * maior. Tambï¿½m calcula o tempo mï¿½dio da chamada utilizando um contador
+	 * para numero de chamadas jï¿½ feitas e o tempo total de chamadas
 	 * 
 	 * @param tempo
 	 */
@@ -144,4 +148,22 @@ public class Estatistica {
 		return numeroDeChamadasRealizadas;
 	}
 
+        public long getMaiorNumeroDeChamadasNoSistema() {
+            return maiorNumeroDeChamadasNoSistema;
+        }
+        
+        public long getMediaDeChamadasNoSistema() {
+            return mediaDeChamadasNoSistema;
+        }
+        
+        public void setMaiorNumeroDeChamadasNoSistema(long maior) {
+            this.maiorNumeroDeChamadasNoSistema = maior;
+        }
+        
+        public void atualizarMaiorNumeroDeChamadasNoSitema() {
+            if(chamadasNoSistema > maiorNumeroDeChamadasNoSistema) {
+                setMaiorNumeroDeChamadasNoSistema( chamadasNoSistema );
+            }
+        }
+        
 }

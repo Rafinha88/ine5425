@@ -239,6 +239,8 @@ public class Simulador {
 				String.valueOf(estatistica.getChamadasSemSinal()));
 		telaDeExecucao.getNumeroTempoMedioChamada().setText(
 				String.valueOf(estatistica.getTempoMedioDeChamada()));
+                telaDeExecucao.getNumeroMaiorChamadasNoSistema().setText(
+                                String.valueOf(estatistica.getMaiorNumeroDeChamadasNoSistema()));
 
 	}
 }
