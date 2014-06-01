@@ -31,18 +31,18 @@ Consiste em simular um sistema de telefonia composto das variáveis:
  
 ## Estatísticas
  
-* Número de Chamadas no Sistema (mínimo; máximo e média)
-* Taxa Média de Ocupação dos Canais
-* Tempo das Chamadas
-* Contadores de Chamadas Completadas
-* Contador de Chamadas perdidas por falta de canal de comunicação (por célula)
-* Contador de Chamadas perdidas por falta de canal de comunicação devido a deslocamento par fora da área de cobertura
+* Número de Chamadas no Sistema (mínimo; máximo e média).
+* Taxa Média de Ocupação dos Canais.
+* Tempo das Chamadas.
+* Contadores de Chamadas Completadas.
+* Contador de Chamadas perdidas por falta de canal de comunicação (por célula).
+* Contador de Chamadas perdidas por falta de canal de comunicação devido a deslocamento par fora da área de cobertura.
  
 ## Itens que devem ser contemplados
  
-* Permita que o usuário possa (de alguma forma) acompanhar a evolução da simulação (use variáveis na tela, gráficos, etc.); 
-* Permita que o usuário possa (de alguma forma) acompanhar o avanço do tempo com passo variável, de acordo com calendário de eventos; 
-* Permita a parada/continuação da simulação e a observação das estatísticas até aquele momento; 
-* Emita um relatório final contendo todas as estatísticas desejadas; 
-* Interface do usuário é muito importante em programas de simulação
+* Permita que o usuário possa (de alguma forma) acompanhar a evolução da simulação (use variáveis na tela, gráficos, etc.).
+* Permita que o usuário possa (de alguma forma) acompanhar o avanço do tempo com passo variável, de acordo com calendário de eventos. 
+* Permita a parada/continuação da simulação e a observação das estatísticas até aquele momento.
+* Emita um relatório final contendo todas as estatísticas desejadas.
+* Interface do usuário é muito importante em programas de simulação.
  
