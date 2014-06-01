@@ -30,21 +30,21 @@ public class TelaDeExecucao extends javax.swing.JFrame {
 
         panelEstatisticas = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        numeroChamadasNoSistema = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        numeroChamadasCompletadas = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        numeroMenorTempoChamada = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        numeroTempoMedioChamada = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        numeroMaiorTempoChamada = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        numeroPerdidasC1 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        numeroPerdidasC2 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        numeroPerdidasFA = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         botaoPausarResumir = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
@@ -57,35 +57,35 @@ public class TelaDeExecucao extends javax.swing.JFrame {
 
         jLabel1.setText("Chamadas no sistema");
 
-        jLabel2.setText("numeroChamadasNoSistema");
+        numeroChamadasNoSistema.setText("numeroChamadasNoSistema");
 
         jLabel3.setText("Chamadas completadas");
 
-        jLabel4.setText("numeroChamadasCompletadas");
+        numeroChamadasCompletadas.setText("numeroChamadasCompletadas");
 
         jLabel5.setText("Menor tempo das chamadas");
 
-        jLabel6.setText("numeroMenorTempo");
+        numeroMenorTempoChamada.setText("numeroMenorTempoChamada");
 
         jLabel7.setText("Tempo medio das chamadas");
 
-        jLabel8.setText("numeroTempoMedio");
+        numeroTempoMedioChamada.setText("numeroTempoMedioChamada");
 
         jLabel9.setText("Maior tempo das chamadas");
 
-        jLabel10.setText("numeroMaiorTempo");
+        numeroMaiorTempoChamada.setText("numeroMaiorTempoChamada");
 
         jLabel11.setText("Chamadas perdidas celula 1");
 
-        jLabel12.setText("numeroPerdidasC1");
+        numeroPerdidasC1.setText("numeroPerdidasC1");
 
         jLabel13.setText("Chamadas perdidas celula 2");
 
-        jLabel14.setText("numeroPerdidasC2");
+        numeroPerdidasC2.setText("numeroPerdidasC2");
 
         jLabel15.setText("Chamadas perdidas fora de area");
 
-        jLabel16.setText("numeroPerdidasFA");
+        numeroPerdidasFA.setText("numeroPerdidasFA");
 
         javax.swing.GroupLayout panelEstatisticasLayout = new javax.swing.GroupLayout(panelEstatisticas);
         panelEstatisticas.setLayout(panelEstatisticasLayout);
@@ -97,15 +97,15 @@ public class TelaDeExecucao extends javax.swing.JFrame {
                     .addGroup(panelEstatisticasLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
+                        .addComponent(numeroChamadasNoSistema))
                     .addGroup(panelEstatisticasLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel4))
+                        .addComponent(numeroChamadasCompletadas))
                     .addGroup(panelEstatisticasLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6))
+                        .addComponent(numeroMenorTempoChamada))
                     .addGroup(panelEstatisticasLayout.createSequentialGroup()
                         .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -114,14 +114,14 @@ public class TelaDeExecucao extends javax.swing.JFrame {
                             .addComponent(jLabel13))
                         .addGap(18, 18, 18)
                         .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel8)))
+                            .addComponent(numeroPerdidasC2)
+                            .addComponent(numeroPerdidasC1)
+                            .addComponent(numeroMaiorTempoChamada)
+                            .addComponent(numeroTempoMedioChamada)))
                     .addGroup(panelEstatisticasLayout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel16)))
+                        .addComponent(numeroPerdidasFA)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelEstatisticasLayout.setVerticalGroup(
@@ -130,35 +130,35 @@ public class TelaDeExecucao extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(numeroChamadasNoSistema))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(numeroChamadasCompletadas))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel6))
+                    .addComponent(numeroMenorTempoChamada))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(numeroTempoMedioChamada))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel10))
+                    .addComponent(numeroMaiorTempoChamada))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel12))
+                    .addComponent(numeroPerdidasC1))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jLabel14))
+                    .addComponent(numeroPerdidasC2))
                 .addGap(18, 18, 18)
                 .addGroup(panelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(jLabel16))
+                    .addComponent(numeroPerdidasFA))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
@@ -276,23 +276,23 @@ public class TelaDeExecucao extends javax.swing.JFrame {
     private javax.swing.JButton botaoPausarResumir;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel numeroChamadasCompletadas;
+    private javax.swing.JLabel numeroChamadasNoSistema;
+    private javax.swing.JLabel numeroMaiorTempoChamada;
+    private javax.swing.JLabel numeroMenorTempoChamada;
+    private javax.swing.JLabel numeroPerdidasC1;
+    private javax.swing.JLabel numeroPerdidasC2;
+    private javax.swing.JLabel numeroPerdidasFA;
+    private javax.swing.JLabel numeroTempoMedioChamada;
     private javax.swing.JPanel panelEstatisticas;
     // End of variables declaration//GEN-END:variables
 }
