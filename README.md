@@ -1,4 +1,4 @@
-# Trabalho Prático - Modelagem e Simulação
+# Trabalho PrÃ¡tico - Modelagem e SimulaÃ§Ã£o
 
 ## Envolvidos
 
@@ -9,75 +9,39 @@
 
 ### Orientador
 
-* [Paulo José de Freitas Filho](http://www.inf.ufsc.br/~freitas/)
+* [Paulo JosÃ© de Freitas Filho](http://www.inf.ufsc.br/~freitas/)
 
 ## Como executar
 
 ## O que fazer
 
-# Simulador em linguagem de propósito geral 
+# Simulador em linguagem de propÃ³sito geral 
 
 ![Esquema de telefonia](http://s30.postimg.org/cwsd1jtb5/esquema_de_telefonia.png)
 
-## Variáveis
+## VariÃ¡veis
 
-Consiste em simular um sistema de telefonia composto das variáveis: 
+Consiste em simular um sistema de telefonia composto das variÃ¡veis: 
 
- * **Células:** Onde estão as estações de rádio base.
- * **Número de canais:** Determinam a sobrecarga do sistema.
- * **Movimentação entre células:** Podem ocasionar perda de sinal ou falta de canal.
- * **Chamadas:** Ocupam por um determinado tempo um canal em uma célula origem e destino. Podendo ser o destino igual a origem.
+ * **CÃ©lulas:** Onde estÃ£o as estaÃ§Ãµes de rÃ¡dio base.
+ * **NÃºmero de canais:** Determinam a sobrecarga do sistema.
+ * **MovimentaÃ§Ã£o entre cÃ©lulas:** Podem ocasionar perda de sinal ou falta de canal.
+ * **Chamadas:** Ocupam por um determinado tempo um canal em uma cÃ©lula origem e destino. Podendo ser o destino igual a origem.
  
  
-## Estatísticas
+## EstatÃ­sticas
  
-* Número de Chamadas no Sistema (mínimo; máximo e média).
-* Taxa Média de Ocupação dos Canais.
+* NÃºmero de Chamadas no Sistema (mÃ­nimo; mÃ¡ximo e mÃ©dia).
+* Taxa MÃ©dia de OcupaÃ§Ã£o dos Canais.
 * Tempo das Chamadas.
 * Contadores de Chamadas Completadas.
-* Contador de Chamadas perdidas por falta de canal de comunicação (por célula).
-* Contador de Chamadas perdidas por falta de canal de comunicação devido a deslocamento par fora da área de cobertura.
+* Contador de Chamadas perdidas por falta de canal de comunicaÃ§Ã£o (por cÃ©lula).
+* Contador de Chamadas perdidas por falta de canal de comunicaÃ§Ã£o devido a deslocamento par fora da Ã¡rea de cobertura.
  
 ## Itens que devem ser contemplados
  
-* Permita que o usuário possa (de alguma forma) acompanhar a evolução da simulação (use variáveis na tela, gráficos, etc.).
-* Permita que o usuário possa (de alguma forma) acompanhar o avanço do tempo com passo variável, de acordo com calendário de eventos. 
-* Permita a parada/continuação da simulação e a observação das estatísticas até aquele momento.
-* Emita um relatório final contendo todas as estatísticas desejadas.
-* Interface do usuário é muito importante em programas de simulação.
-
-## Como executar
-
-## O que fazer
-
-# Simulador em linguagem de propósito geral 
-
-![Esquema de telefonia](http://s30.postimg.org/cwsd1jtb5/esquema_de_telefonia.png)
-
-## Variáveis
-
-Consiste em simular um sistema de telefonia composto das variáveis: 
-
- * **Células:** Onde estão as estações de rádio base.
- * **Número de canais:** Determinam a sobrecarga do sistema.
- * **Movimentação entre células:** Podem ocasionar perda de sinal ou falta de canal.
- * **Chamadas:** Ocupam por um determinado tempo um canal em uma célula origem e destino. Podendo ser o destino igual a origem.
- 
- 
- ## Estatísticas
- 
-* Número de Chamadas no Sistema (mínimo; máximo e média)
-* Taxa Média de Ocupação dos Canais
-* Tempo das Chamadas
-* Contadores de Chamadas Completadas
-* Contador de Chamadas perdidas por falta de canal de comunicação (por célula)
-* Contador de Chamadas perdidas por falta de canal de comunicação devido a deslocamento par fora da área de cobertura
- 
- ## Itens que devem ser contemplados
- 
-* Permita que o usuário possa (de alguma forma) acompanhar a evolução da simulação (use variáveis na tela, gráficos, etc.); 
-* Permita que o usuário possa (de alguma forma) acompanhar o avanço do tempo com passo variável, de acordo com calendário de eventos; 
-* Permita a parada/continuação da simulação e a observação das estatísticas até aquele momento; 
-* Emita um relatório final contendo todas as estatísticas desejadas; 
-* Interface do usuário é muito importante em programas de simulação
- 
+* Permita que o usuÃ¡rio possa (de alguma forma) acompanhar a evoluÃ§Ã£o da simulaÃ§Ã£o (use variÃ¡veis na tela, grÃ¡ficos, etc.).
+* Permita que o usuÃ¡rio possa (de alguma forma) acompanhar o avanÃ§o do tempo com passo variÃ¡vel, de acordo com calendÃ¡rio de eventos. 
+* Permita a parada/continuaÃ§Ã£o da simulaÃ§Ã£o e a observaÃ§Ã£o das estatÃ­sticas atÃ© aquele momento.
+* Emita um relatÃ³rio final contendo todas as estatÃ­sticas desejadas.
+* Interface do usuÃ¡rio Ã© muito importante em programas de simulaÃ§Ã£o.
