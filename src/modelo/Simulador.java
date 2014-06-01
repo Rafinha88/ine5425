@@ -85,7 +85,6 @@ public class Simulador {
 			public void actionPerformed(ActionEvent e) {
 				visao.preprarVariaveis();
 				iniciar();
-
 			}
 		});
 
@@ -95,10 +94,14 @@ public class Simulador {
 		setarVariaveisVisaoParaModelo();
 		setup();
 		loop();
+		fim();
+	}
+
+	private static void fim() {
+
 	}
 
 	private static void setup() {
-		System.out.println("Setup chamado!");
 		eventos = new ListaEncadeadaOrdenada<>();
 		relogio = new Relogio();
 		estatistica = Estatistica.getInstance();
@@ -114,29 +117,39 @@ public class Simulador {
 	}
 
 	private static void loop() {
-		// TODO: Implementar pausa etc.
-		System.out.println("Chamando loop");
 		while (!pausado) {
 			int contador = 0;
+			try {
+				Thread.sleep(40l);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				break;
+			}
+			System.out.println("#######################");
 			while (contador != numeroDePassosDeExecucao) {
 				avancarTempo();
 				executarEvento();
 				contador++;
 			}
 			mostrarEstatisticas();
-
+			System.out.println("#######################");
 		}
 	}
 
 	private static void avancarTempo() {
 		System.out.println("Avancando tempo");
 		relogio.avancarPara(eventos.get(0).getTempo());
+		System.out.printf("Avancando tempo em %s\n", eventos.getFirst()
+				.getTempo());
+		relogio.avancarPara(eventos.getFirst().getTempo());
 	}
 
 	private static void executarEvento() {
-		System.out.println("Executando evento");
+		System.out.printf("Executando evento no tempo %s%n ",
+				relogio.getTempo());
 		Evento evento = eventos.pop();
 		if (evento instanceof Chegada) {
+			System.out.println("Evento � uma chegada");
 			eventos.adicionarOrdenado(gerador.gerarProximaChegadaC1(relogio
 					.getTempo()));
 			eventos.adicionarOrdenado(gerador.gerarProximaChegadaC2(relogio
@@ -151,7 +164,20 @@ public class Simulador {
 	private static void mostrarEstatisticas() {
 		System.out.println("Chamadas completadas : "
 				+ estatistica.getChamadasCompletadas());
-                
+		System.out.println("Chamadas no sistema : "
+				+ estatistica.getChamadasNoSistema());
+		System.out.println("Chamadas perdidas por falta do canal 1 : "
+				+ estatistica.getChamadaPerdidaFaltaDeCanalC1());
+		System.out.println("Chamadas perdidas por falta do canal 2 : "
+				+ estatistica.getChamadaPerdidaFaltaDeCanalC2());
+		System.out.println("Tempo m�dio de chamadas: "
+				+ estatistica.getTempoMedioDeChamada());
+		System.out.println("Tempo total de chamadas: "
+				+ estatistica.getTempoTotalDeChamadas());
+		System.out.println("Maior tempo de chamada: "
+				+ estatistica.getMaiorTempoDeChamada());
+		System.out.println("Menor tempo de chamada: "
+				+ estatistica.getMenorTempoDeChamada());
 	}
 
 }
