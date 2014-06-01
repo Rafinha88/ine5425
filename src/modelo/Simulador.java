@@ -13,9 +13,6 @@ import visao.TelaDeExecucao;
 
 public class Simulador {
 
-	// TODO: Adicionar os atributos recebidos pela view de configura��o do
-	// operador.
-
 	static Relogio relogio;
 	static Gerador gerador;
 	static Estatistica estatistica;
@@ -162,7 +159,7 @@ public class Simulador {
 		instance.comNomeDoC1("c1");
 		instance.comNomeDoC2("c2");
 		instance.comNumeroDeCanaisDoC1(canaisC1);
-		instance.comNumeroDeCanaisDoC1(canaisC2);
+		instance.comNumeroDeCanaisDoC2(canaisC2);
 		c1 = instance.constroiOuGetC1();
 		c2 = instance.constroiOuGetC2();
 		gerador = new Gerador(mediaFuncaoTempoC1, frequenciaC1C1,
