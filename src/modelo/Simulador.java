@@ -45,7 +45,7 @@ public class Simulador {
 
 	static long tempoSimulacao;
 	static ModSimUI visao;
-        TelaDeExecucao segundaVisao;
+	TelaDeExecucao segundaVisao;
 
 	static boolean pausado = false;
 
@@ -105,6 +105,11 @@ public class Simulador {
 		eventos = new ListaEncadeadaOrdenada<>();
 		relogio = new Relogio();
 		estatistica = Estatistica.getInstance();
+		CelulaSingletonBuilder instance = CelulaSingletonBuilder.getInstance();
+		instance.comNomeDoC1("c1");
+		instance.comNomeDoC2("c2");
+		instance.comNumeroDeCanaisDoC1(canaisC1);
+		instance.comNumeroDeCanaisDoC1(canaisC2);
 		gerador = new Gerador(mediaFuncaoTempoC1, frequenciaC1C1,
 				frequenciaC1C2, frequenciaC1FA, mediaFuncaoTempoC2,
 				frequenciaC2C1, frequenciaC2C2, frequenciaC2FA,
