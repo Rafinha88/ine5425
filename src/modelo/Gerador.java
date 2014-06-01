@@ -75,6 +75,7 @@ public class Gerador {
 
 	private Chamada gerarChamadaEmC1(long tempo) {
 		double proximoAleatorio = aleatorio.nextDouble() * 100;
+                System.out.println(proximoAleatorio);
 		Chamada chamada = null;
 		Celula origem = CelulaSingletonBuilder.getInstance().constroiOuGetC1();
 		Celula c2 = CelulaSingletonBuilder.getInstance().constroiOuGetC2();
@@ -91,8 +92,9 @@ public class Gerador {
 			// TODO: Pensar na maneira correta de tratar com o fora de sinal.
 			chamada = new Chamada(origem, null, duracao, tempo);
 		}
-		return chamada;
-	}
+                System.out.println("celula destino " + chamada.getCelulaDestino().getNome());
+                return chamada;
+        }
 
 	private Chamada gerarChamadaEmC2(long tempo) {
 		double proximoAleatorio = aleatorio.nextDouble() * 100;
@@ -102,10 +104,10 @@ public class Gerador {
 		long duracao = (long) distribuicaoDuracaoChamada.sample();
 		System.out.printf("Gerador | duracao c2 = %s\n", duracao);
 		if (proximoAleatorio < probabilidadeDeGerarC2C1) {
-			chamada = new Chamada(origem, origem, duracao, tempo);
+			chamada = new Chamada(origem, c1, duracao, tempo);
 		} else if (proximoAleatorio < probabilidadeDeGerarC2C1
 				+ probabilidadeDeGerarC2C2) {
-			chamada = new Chamada(origem, c1, duracao, tempo);
+			chamada = new Chamada(origem, origem, duracao, tempo);
 		} else if (proximoAleatorio > probabilidadeDeGerarC2C1
 				+ probabilidadeDeGerarC2C2) {
 			// TODO: Pensar na maneira correta de tratar com o fora de sinal.
