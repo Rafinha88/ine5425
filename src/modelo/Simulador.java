@@ -129,7 +129,7 @@ public class Simulador {
 	}
 
 	private static void avancarTempo() {
-		System.out.println("Avançando tempo");
+		System.out.println("Avancando tempo");
 		relogio.avancarPara(eventos.get(0).getTempo());
 	}
 
