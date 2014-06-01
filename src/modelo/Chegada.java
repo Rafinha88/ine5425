@@ -14,7 +14,6 @@ public class Chegada extends Evento {
 	@Override
 	public Evento executar() {
 		getChamada().iniciar();
-		System.out.printf("Chegada | Troca em %s%n", getTempo() + getChamada().getDuracao() / 2);
 		Evento evento = new TrocaDeCelula(getChamada(), getTempo()
 				+ (getChamada().getDuracao() / 2));
 		coletarEstatisticas();
