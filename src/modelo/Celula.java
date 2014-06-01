@@ -6,7 +6,7 @@ public class Celula {
 	// Importante para manter estatisticas.
 	private final int numeroDeCanais;
 	private int canaisDisponiveis;
-	//TODO: Verificar em como manter a estátistica. 
+	//TODO: Verificar em como manter a estatistica. 
 	private double taxaMediaOcupacao;
 
 	public Celula(String nome, int canais) {
@@ -32,7 +32,7 @@ public class Celula {
 	}
 
 	/**
-	 * @return True caso tenha canal disponível
+	 * @return True caso tenha canal disponivel
 	 */
 	public boolean ocuparCanal() {
 		if (canaisDisponiveis >= 1) {
@@ -43,8 +43,8 @@ public class Celula {
 	}
 
 	/**
-	 * Método para evitar a situação em que o número de canais disponível seja maior que o número de canais 
-	 * @return True quando ocorrer desocupação de canal
+	 * Metodo para evitar a situacao em que o numero de canais disponivel seja maior que o numero de canais 
+	 * @return True quando ocorrer desocupacaode canal
 	 */
 	public boolean desocuparCanal() {
 		if (canaisDisponiveis < numeroDeCanais) {

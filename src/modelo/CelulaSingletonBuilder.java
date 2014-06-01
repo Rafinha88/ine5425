@@ -25,7 +25,7 @@ public class CelulaSingletonBuilder {
 	}
 
 	/**
-	 * Padrão de projeto singleton
+	 * Padrao de projeto singleton
 	 */
 	public static CelulaSingletonBuilder getInstance() {
 		if (instance == null) {
@@ -47,7 +47,7 @@ public class CelulaSingletonBuilder {
 	}
 
 	/**
-	 * Garante que o c1 será o mesmo em toda a aplicação. Singleton "simulado".
+	 * Garante que o c1 sera o mesmo em toda a aplicacao. Singleton "simulado".
 	 * 
 	 * @return Celula c1
 	 */
@@ -72,7 +72,7 @@ public class CelulaSingletonBuilder {
 	}
 
 	/**
-	 * Garante que o c1 será o mesmo em toda a aplicação. Singleton "simulado".
+	 * Garante que o c1 sera o mesmo em toda a aplicacao. Singleton "simulado".
 	 * 
 	 * @return Celula c1
 	 */
