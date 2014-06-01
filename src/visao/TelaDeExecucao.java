@@ -6,15 +6,8 @@
 
 package visao;
 
-/**
- * 
- * @author rafaelmelchert
- */
 public class TelaDeExecucao extends javax.swing.JFrame {
 
-	/**
-	 * Creates new form TelaDeExecucao
-	 */
 	public TelaDeExecucao() {
 		initComponents();
 	}
@@ -57,6 +50,10 @@ public class TelaDeExecucao extends javax.swing.JFrame {
 
 	public javax.swing.JButton getBotaoPausarResumir() {
 		return botaoPausarResumir;
+	}
+
+	public javax.swing.JComboBox getjComboBox1() {
+		return jComboBox1;
 	}
 
 	/**

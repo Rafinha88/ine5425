@@ -54,7 +54,6 @@ public class Simulador {
 
 	private static int numeroDePassosDeExecucao;
 	private static boolean iniciar;
-	static JButton botaoPausarResumir;
 
 	static private void setarVariaveisVisaoParaModelo() {
 		frequenciaC1C1 = visao.getFrequenciaC1C1();
@@ -102,7 +101,7 @@ public class Simulador {
 
 			}
 		});
-		botaoPausarResumir = telaDeExecucao.getBotaoPausarResumir();
+		JButton botaoPausarResumir = telaDeExecucao.getBotaoPausarResumir();
 		botaoPausarResumir.addActionListener(new ActionListener() {
 
 			@Override
@@ -111,6 +110,28 @@ public class Simulador {
 					pausado = false;
 				} else {
 					pausado = true;
+				}
+			}
+		});
+
+		JButton botaoAvancar = telaDeExecucao.getBotaoAvancar();
+		botaoAvancar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int indice = Integer.valueOf(telaDeExecucao.getjComboBox1()
+						.getSelectedIndex());
+				switch (indice) {
+				case 0:
+					numeroDePassosDeExecucao = 1;
+					break;
+				case 1:
+					numeroDePassosDeExecucao = 3;
+					break;
+
+				case 2:
+					numeroDePassosDeExecucao = 5;
+					break;
 				}
 			}
 		});
@@ -152,7 +173,7 @@ public class Simulador {
 			while (!pausado) {
 				int contador = 0;
 				try {
-					Thread.sleep(200);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					break;
