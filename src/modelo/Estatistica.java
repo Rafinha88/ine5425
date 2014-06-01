@@ -17,6 +17,30 @@ public class Estatistica {
 	private long maiorTempoDeChamada;
 	private long taxaMediaDeOcupacao;
 
+	private int numeroDeCanaisOcupadosDeC1;
+
+	public int getNumeroDeCanaisOcupadosDeC1() {
+		Celula c1 = CelulaSingletonBuilder.getInstance().constroiOuGetC1();
+		return c1.getNumeroDeCanais() - c1.getCanaisDisponiveis();
+	}
+
+	public long getTaxaMediaDeOcupacaoDeC1() {
+		return taxaMediaDeOcupacaoDeC1;
+	}
+
+	public int getNumeroDeCanaisOcupadosDeC2() {
+		Celula c2 = CelulaSingletonBuilder.getInstance().constroiOuGetC2();
+		return c2.getNumeroDeCanais() - c2.getCanaisDisponiveis();
+	}
+
+	public long getTaxaMediaDeOcupacaoDeC2() {
+		return taxaMediaDeOcupacaoDeC2;
+	}
+
+	private long taxaMediaDeOcupacaoDeC1;
+	private int numeroDeCanaisOcupadosDeC2;
+	private long taxaMediaDeOcupacaoDeC2;
+
 	// Estes dois atributos são essenciais para calcular o tempo médio de
 	// chamada.
 	private long tempoTotalDeChamadas;
