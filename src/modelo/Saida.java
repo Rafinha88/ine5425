@@ -18,7 +18,6 @@ public class Saida extends Evento {
 		return null;
 	}
 
-	// TODO: Implementar
 	public void coletarEstatisticas() {
 		Estatistica estatistica = Estatistica.getInstance();
 		estatistica.decrementarNumeroDeChamadasNoSistema();
