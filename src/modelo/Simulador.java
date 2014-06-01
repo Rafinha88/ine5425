@@ -2,17 +2,11 @@ package modelo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.JButton;
-
-import modelo.Chegada;
-import modelo.Estatistica;
-import modelo.Evento;
-import modelo.Gerador;
-import modelo.ListaEncadeadaOrdenada;
-import modelo.Relogio;
-
-import org.apache.commons.math3.distribution.NormalDistribution;
+import javax.swing.JComboBox;
 
 import visao.ModSimUI;
 import visao.TelaDeExecucao;
@@ -50,10 +44,13 @@ public class Simulador {
 	static ModSimUI visao;
 	static TelaDeExecucao telaDeExecucao;
 
+	static boolean encerrar;
 	static boolean pausado = false;
 
 	private static int numeroDePassosDeExecucao;
-	private static boolean iniciar;
+	private static CelulaSingletonBuilder instance;
+	private static Celula c1;
+	private static Celula c2;
 
 	static private void setarVariaveisVisaoParaModelo() {
 		frequenciaC1C1 = visao.getFrequenciaC1C1();
@@ -114,11 +111,10 @@ public class Simulador {
 			}
 		});
 
-		JButton botaoAvancar = telaDeExecucao.getBotaoAvancar();
-		botaoAvancar.addActionListener(new ActionListener() {
-
+		JComboBox<?> comboBoxPassosDeExecucao = telaDeExecucao.getjComboBox1();
+		comboBoxPassosDeExecucao.addItemListener(new ItemListener() {
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void itemStateChanged(ItemEvent arg0) {
 				int indice = Integer.valueOf(telaDeExecucao.getjComboBox1()
 						.getSelectedIndex());
 				switch (indice) {
@@ -133,6 +129,16 @@ public class Simulador {
 					numeroDePassosDeExecucao = 5;
 					break;
 				}
+			}
+		});
+
+		JButton botaoEncerrar = telaDeExecucao.getBotaoEncerrar();
+		botaoEncerrar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				pausado = true;
+				encerrar = true;
 			}
 		});
 	}
@@ -152,11 +158,13 @@ public class Simulador {
 		eventos = new ListaEncadeadaOrdenada<>();
 		relogio = new Relogio();
 		estatistica = Estatistica.getInstance();
-		CelulaSingletonBuilder instance = CelulaSingletonBuilder.getInstance();
+		instance = CelulaSingletonBuilder.getInstance();
 		instance.comNomeDoC1("c1");
 		instance.comNomeDoC2("c2");
 		instance.comNumeroDeCanaisDoC1(canaisC1);
 		instance.comNumeroDeCanaisDoC1(canaisC2);
+		c1 = instance.constroiOuGetC1();
+		c2 = instance.constroiOuGetC2();
 		gerador = new Gerador(mediaFuncaoTempoC1, frequenciaC1C1,
 				frequenciaC1C2, frequenciaC1FA, mediaFuncaoTempoC2,
 				frequenciaC2C1, frequenciaC2C2, frequenciaC2FA,
@@ -169,8 +177,12 @@ public class Simulador {
 	}
 
 	private static void loop() {
-		while (true) {
+		while (!encerrar) {
 			while (!pausado) {
+				if (tempoSimulacao <= relogio.getTempo()) {
+					pausado = true;
+					encerrar = true;
+				}
 				int contador = 0;
 				try {
 					Thread.sleep(1000);
@@ -189,19 +201,12 @@ public class Simulador {
 	}
 
 	private static void avancarTempo() {
-		System.out.println("Avancando tempo");
-		relogio.avancarPara(eventos.get(0).getTempo());
-		System.out.printf("Avancando tempo em %s\n", eventos.getFirst()
-				.getTempo());
 		relogio.avancarPara(eventos.getFirst().getTempo());
 	}
 
 	private static void executarEvento() {
-		System.out.printf("Executando evento no tempo %s%n ",
-				relogio.getTempo());
 		Evento evento = eventos.pop();
 		if (evento instanceof Chegada) {
-			System.out.println("Evento � uma chegada");
 			eventos.adicionarOrdenado(gerador.gerarProximaChegadaC1(relogio
 					.getTempo()));
 			eventos.adicionarOrdenado(gerador.gerarProximaChegadaC2(relogio
@@ -215,6 +220,12 @@ public class Simulador {
 
 	private static void mostrarEstatisticas() {
 		telaDeExecucao.repaint();
+		telaDeExecucao.getCampoTempoAtual().setText(
+				String.valueOf(relogio.getTempo()));
+		telaDeExecucao.getNumeroDeCanaisDeC1Ocupados().setText(
+				String.valueOf(estatistica.getNumeroDeCanaisOcupadosDeC1()));
+		telaDeExecucao.getNumeroDeCanaisDeC2Ocupados().setText(
+				String.valueOf(estatistica.getNumeroDeCanaisOcupadosDeC2()));
 		telaDeExecucao.getNumeroChamadasCompletadas().setText(
 				String.valueOf(estatistica.getChamadasCompletadas()));
 		telaDeExecucao.getNumeroChamadasNoSistema().setText(
