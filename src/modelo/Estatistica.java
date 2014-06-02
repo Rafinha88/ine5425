@@ -17,11 +17,13 @@ public class Estatistica {
 	private long maiorTempoDeChamada;
 	private long taxaMediaDeOcupacao;
 
-	private long taxaMediaDeOcupacaoDeC1;
-	private long taxaMediaDeOcupacaoDeC2;
-        
-        private long maiorNumeroDeChamadasNoSistema;
-        private long mediaDeChamadasNoSistema;
+	private double[] historicoDeTaxaDeOcupacaoDeC1;
+	private int controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC1;
+	private double[] historicoDeTaxaDeOcupacaoDeC2;
+	private int controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC2;
+
+	private long maiorNumeroDeChamadasNoSistema;
+	private long mediaDeChamadasNoSistema;
 
 	// Estes dois atributos s�o essenciais para calcular o tempo m�dio de
 	// chamada.
@@ -33,8 +35,28 @@ public class Estatistica {
 		return c1.getNumeroDeCanais() - c1.getCanaisDisponiveis();
 	}
 
-	public long getTaxaMediaDeOcupacaoDeC1() {
-		return taxaMediaDeOcupacaoDeC1;
+	public double getTaxaMediaDeOcupacaoDeC1() {
+		double soma = 0;
+		int quantidadeDeTaxasDifentesDeZero = 0;
+		for (double historico : historicoDeTaxaDeOcupacaoDeC1) {
+			if (historico != 0) {
+				quantidadeDeTaxasDifentesDeZero++;
+				soma += historico;
+			}
+		}
+		Celula c1 = CelulaSingletonBuilder.getInstance().constroiOuGetC1();
+		double taxaAtual = (double) (c1.getNumeroDeCanais() - c1
+				.getCanaisDisponiveis()) / c1.getNumeroDeCanais();
+		double novaMedia = (double) (taxaAtual + soma)
+				/ (quantidadeDeTaxasDifentesDeZero + 1);
+		historicoDeTaxaDeOcupacaoDeC1[controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC1] = novaMedia;
+
+		if (controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC1 == 9) {
+			controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC1 = 0;
+		} else {
+			controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC1++;
+		}
+		return novaMedia;
 	}
 
 	public int getNumeroDeCanaisOcupadosDeC2() {
@@ -42,8 +64,28 @@ public class Estatistica {
 		return c2.getNumeroDeCanais() - c2.getCanaisDisponiveis();
 	}
 
-	public long getTaxaMediaDeOcupacaoDeC2() {
-		return taxaMediaDeOcupacaoDeC2;
+	public double getTaxaMediaDeOcupacaoDeC2() {
+		double soma = 0;
+		int quantidadeDeTaxasDifentesDeZero = 0;
+		for (double historico : historicoDeTaxaDeOcupacaoDeC2) {
+			if (historico != 0) {
+				quantidadeDeTaxasDifentesDeZero++;
+				soma += historico;
+			}
+		}
+		Celula c2 = CelulaSingletonBuilder.getInstance().constroiOuGetC2();
+		double taxaAtual = (double) (c2.getNumeroDeCanais() - c2
+				.getCanaisDisponiveis()) / c2.getNumeroDeCanais();
+		double novaMedia = (double) (taxaAtual + soma)
+				/ (quantidadeDeTaxasDifentesDeZero + 1);
+		historicoDeTaxaDeOcupacaoDeC2[controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC2] = novaMedia;
+
+		if (controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC2 == 9) {
+			controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC2 = 0;
+		} else {
+			controleDoIndiceParaHistoricoDeTaxaDeOcupacaoC2++;
+		}
+		return novaMedia;
 	}
 
 	private static Estatistica instance;
@@ -51,7 +93,9 @@ public class Estatistica {
 	private Estatistica() {
 		menorTempoDeChamada = 0;
 		maiorTempoDeChamada = 0;
-                maiorNumeroDeChamadasNoSistema = 0;
+		maiorNumeroDeChamadasNoSistema = 0;
+		historicoDeTaxaDeOcupacaoDeC1 = new double[10];
+		historicoDeTaxaDeOcupacaoDeC2 = new double[10];
 	}
 
 	public static Estatistica getInstance() {
@@ -148,22 +192,22 @@ public class Estatistica {
 		return numeroDeChamadasRealizadas;
 	}
 
-        public long getMaiorNumeroDeChamadasNoSistema() {
-            return maiorNumeroDeChamadasNoSistema;
-        }
-        
-        public long getMediaDeChamadasNoSistema() {
-            return mediaDeChamadasNoSistema;
-        }
-        
-        public void setMaiorNumeroDeChamadasNoSistema(long maior) {
-            this.maiorNumeroDeChamadasNoSistema = maior;
-        }
-        
-        public void atualizarMaiorNumeroDeChamadasNoSitema() {
-            if(chamadasNoSistema > maiorNumeroDeChamadasNoSistema) {
-                setMaiorNumeroDeChamadasNoSistema( chamadasNoSistema );
-            }
-        }
-        
+	public long getMaiorNumeroDeChamadasNoSistema() {
+		return maiorNumeroDeChamadasNoSistema;
+	}
+
+	public long getMediaDeChamadasNoSistema() {
+		return mediaDeChamadasNoSistema;
+	}
+
+	public void setMaiorNumeroDeChamadasNoSistema(long maior) {
+		this.maiorNumeroDeChamadasNoSistema = maior;
+	}
+
+	public void atualizarMaiorNumeroDeChamadasNoSitema() {
+		if (chamadasNoSistema > maiorNumeroDeChamadasNoSistema) {
+			setMaiorNumeroDeChamadasNoSistema(chamadasNoSistema);
+		}
+	}
+
 }

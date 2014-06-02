@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.ObjectInputStream.GetField;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -152,7 +153,7 @@ public class Simulador {
 	}
 
 	private static void setup() {
-		eventos = new ListaEncadeadaOrdenada<>();
+		eventos = new ListaEncadeadaOrdenada();
 		relogio = new Relogio();
 		estatistica = Estatistica.getInstance();
 		instance = CelulaSingletonBuilder.getInstance();
@@ -217,6 +218,10 @@ public class Simulador {
 
 	private static void mostrarEstatisticas() {
 		telaDeExecucao.repaint();
+		telaDeExecucao.getTaxaMediaDeOcupacaoDeC1().setText(
+				String.format("%.1f", estatistica.getTaxaMediaDeOcupacaoDeC1()*100).concat("%"));
+		telaDeExecucao.getTaxaMediaDeOcupacaoDeC2().setText(
+				String.format("%.1f", estatistica.getTaxaMediaDeOcupacaoDeC2()*100).concat("%"));
 		telaDeExecucao.getCampoTempoAtual().setText(
 				String.valueOf(relogio.getTempo()));
 		telaDeExecucao.getNumeroDeCanaisDeC1Ocupados().setText(
@@ -239,8 +244,10 @@ public class Simulador {
 				String.valueOf(estatistica.getChamadasSemSinal()));
 		telaDeExecucao.getNumeroTempoMedioChamada().setText(
 				String.valueOf(estatistica.getTempoMedioDeChamada()));
-                telaDeExecucao.getNumeroMaiorChamadasNoSistema().setText(
-                                String.valueOf(estatistica.getMaiorNumeroDeChamadasNoSistema()));
+		telaDeExecucao.getNumeroMaiorChamadasNoSistema()
+				.setText(
+						String.valueOf(estatistica
+								.getMaiorNumeroDeChamadasNoSistema()));
 
 	}
 }
