@@ -23,6 +23,7 @@ public class Chegada extends Evento {
 	// TODO: Pensar em como gerar as estatisticas
 	private void coletarEstatisticas() {
 		Estatistica.getInstance().incrementarChamadasNoSistema();
+                Estatistica.getInstance().atualizarMaiorNumeroDeChamadasNoSitema();
 	}
 
 }

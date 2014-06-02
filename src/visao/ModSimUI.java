@@ -562,19 +562,54 @@ public class ModSimUI extends javax.swing.JFrame {
 		return false;
 	}
 
-	public void verificarFrequencia() {
+        public boolean validarDistribuicao() {
+            switch (tDistribuicaoDuracao.getSelectedItem().toString() ) {
+		case "Triangular":
+			if(parametro1 >= parametro2 | parametro2 >= parametro3) {
+                            JOptionPane.showMessageDialog(null,
+					"Os parametros da distribuica triangular estao errados", "Erro na Distribuicao",
+					JOptionPane.ERROR_MESSAGE);
+                            return false;
+                        }
+                        break;
+		case "Normal":
+			if(parametro2 >= parametro1 | parametro2 == 0) {
+                            JOptionPane.showMessageDialog(null,
+					"Os parametros da distribuica normal estao errados", "Erro na Distribuicao",
+					JOptionPane.ERROR_MESSAGE);
+                            return false;
+                        }
+                        break;
+		case "Uniforme":
+			if(parametro1 >= parametro2) {
+                            JOptionPane.showMessageDialog(null,
+					"Os parametros da distribuica uniforme estao errados", "Erro na Distribuicao",
+					JOptionPane.ERROR_MESSAGE);
+                            return false;
+                        }
+                        break;
+                default:
+                    return true;
+            }
+            return true;
+        }
+        
+	public boolean validarFrequencia() {
 
 		if (frequenciaC1C1 + frequenciaC1C2 + frequenciaC1FA != 100) {
 			JOptionPane.showMessageDialog(null,
 					"A soma da frequencia deve ser 100%", "Erro na Frequencia",
 					JOptionPane.ERROR_MESSAGE);
+                        return false;
 		}
 
 		if (frequenciaC2C1 + frequenciaC2C2 + frequenciaC2FA != 100) {
 			JOptionPane.showMessageDialog(null,
 					"A soma da frequencia deve ser 100%", "Erro na Frequencia",
 					JOptionPane.ERROR_MESSAGE);
-		}
+                        return false;
+                }
+                return true;
 
 	}
 

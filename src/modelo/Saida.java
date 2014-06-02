@@ -22,7 +22,6 @@ public class Saida extends Evento {
 		Estatistica estatistica = Estatistica.getInstance();
 		estatistica.decrementarNumeroDeChamadasNoSistema();
 		estatistica.analisarTempoDaChamada(getChamada().getDuracao());
-                estatistica.atualizarMaiorNumeroDeChamadasNoSitema();
 		switch (getChamada().getEstado()) {
 		case SEM_CANAL:
 			if (getChamada().getCelulaDestino() == CelulaSingletonBuilder
