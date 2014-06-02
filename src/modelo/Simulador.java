@@ -5,10 +5,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.io.ObjectInputStream.GetField;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 
+import modelo.Evento;
 import visao.ModSimUI;
 import visao.TelaDeExecucao;
 
@@ -249,6 +253,50 @@ public class Simulador {
 				.setText(
 						String.valueOf(estatistica
 								.getMaiorNumeroDeChamadasNoSistema()));
+		try {
+			atualizarEventosFuturos();
+		} catch (NoSuchMethodException | SecurityException
+				| IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+	}
+
+	private static void atualizarEventosFuturos() throws NoSuchMethodException,
+			SecurityException, IllegalAccessException,
+			IllegalArgumentException, InvocationTargetException {
+		int contador = 1;
+		telaDeExecucao.getCampoTempoDoEventoFuturo1();
+		for (Evento evento : eventos) {
+			Method metodoDoCampoTempo = telaDeExecucao.getClass().getMethod(
+					"getCampoTempoDoEventoFuturo" + contador);
+			JLabel labelTempo = (JLabel) metodoDoCampoTempo
+					.invoke(telaDeExecucao);
+			Method metodoTipoDoEvento = telaDeExecucao.getClass().getMethod(
+					"getCampoTipoDoEvento" + contador);
+			JLabel labelTipo = (JLabel) metodoTipoDoEvento
+					.invoke(telaDeExecucao);
+			labelTempo.setText(String.valueOf(evento.getTempo()));
+			labelTipo.setText(evento.getClass().getSimpleName());
+			if (contador == 13) {
+				return;
+			}
+			contador++;
+		}
+		while (contador <= 13) {
+			Method metodoDoCampoTempo = telaDeExecucao.getClass().getMethod(
+					"getCampoTempoDoEventoFuturo" + contador);
+			JLabel labelTempo = (JLabel) metodoDoCampoTempo
+					.invoke(telaDeExecucao);
+			Method metodoTipoDoEvento = telaDeExecucao.getClass().getMethod(
+					"getCampoTipoDoEvento" + contador);
+			JLabel labelTipo = (JLabel) metodoTipoDoEvento
+					.invoke(telaDeExecucao);
+			labelTempo.setText("---");
+			labelTipo.setText("---");
+			contador++;
+		}
 	}
 }

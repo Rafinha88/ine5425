@@ -69,6 +69,111 @@ public class TelaDeExecucao extends javax.swing.JFrame {
 		return numeroDeCanaisDeC2Ocupados;
 	}
 	
+	
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo1() {
+		return campoTempoDoEventoFuturo1;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo10() {
+		return campoTempoDoEventoFuturo10;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo11() {
+		return campoTempoDoEventoFuturo11;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo12() {
+		return campoTempoDoEventoFuturo12;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo13() {
+		return campoTempoDoEventoFuturo13;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo2() {
+		return campoTempoDoEventoFuturo2;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo3() {
+		return campoTempoDoEventoFuturo3;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo4() {
+		return campoTempoDoEventoFuturo4;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo5() {
+		return campoTempoDoEventoFuturo5;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo6() {
+		return campoTempoDoEventoFuturo6;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo7() {
+		return campoTempoDoEventoFuturo7;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo8() {
+		return campoTempoDoEventoFuturo8;
+	}
+
+	public javax.swing.JLabel getCampoTempoDoEventoFuturo9() {
+		return campoTempoDoEventoFuturo9;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento1() {
+		return campoTipoDoEvento1;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento10() {
+		return campoTipoDoEvento10;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento11() {
+		return campoTipoDoEvento11;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento12() {
+		return campoTipoDoEvento12;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento13() {
+		return campoTipoDoEvento13;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento2() {
+		return campoTipoDoEvento2;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento3() {
+		return campoTipoDoEvento3;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento4() {
+		return campoTipoDoEvento4;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento5() {
+		return campoTipoDoEvento5;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento6() {
+		return campoTipoDoEvento6;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento7() {
+		return campoTipoDoEvento7;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento8() {
+		return campoTipoDoEvento8;
+	}
+
+	public javax.swing.JLabel getCampoTipoDoEvento9() {
+		return campoTipoDoEvento9;
+	}
+
 	public javax.swing.JLabel getCampoTempoAtual() {
 		return campoTempoAtual;
 	}
@@ -90,6 +195,8 @@ public class TelaDeExecucao extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jSeparator1 = new javax.swing.JSeparator();
         panelEstatisticas = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         numeroChamadasNoSistema = new javax.swing.JLabel();
@@ -118,14 +225,54 @@ public class TelaDeExecucao extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         numeroMaiorChamadasNoSistema = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
-        jLabel2 = new javax.swing.JLabel();
-        campoTempoAtual = new javax.swing.JLabel();
         botaoPausarResumir = new javax.swing.JButton();
         botaoEncerrar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        campoTempoAtual = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo1 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo2 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo4 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo3 = new javax.swing.JLabel();
+        campoTipoDoEvento1 = new javax.swing.JLabel();
+        campoTipoDoEvento2 = new javax.swing.JLabel();
+        campoTipoDoEvento3 = new javax.swing.JLabel();
+        campoTipoDoEvento4 = new javax.swing.JLabel();
+        campoTipoDoEvento5 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo5 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo6 = new javax.swing.JLabel();
+        campoTipoDoEvento6 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo7 = new javax.swing.JLabel();
+        campoTipoDoEvento7 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo8 = new javax.swing.JLabel();
+        campoTipoDoEvento8 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo9 = new javax.swing.JLabel();
+        campoTipoDoEvento9 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo10 = new javax.swing.JLabel();
+        campoTipoDoEvento10 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo11 = new javax.swing.JLabel();
+        campoTipoDoEvento11 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo12 = new javax.swing.JLabel();
+        campoTipoDoEvento12 = new javax.swing.JLabel();
+        campoTempoDoEventoFuturo13 = new javax.swing.JLabel();
+        campoTipoDoEvento13 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Execucao");
@@ -305,37 +452,12 @@ public class TelaDeExecucao extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel17.setText("Velocidade de Execucao");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel17)
-                .addContainerGap(179, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 15, Short.MAX_VALUE)
-                .addComponent(jLabel17))
-        );
-
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Passo", "3 Passos", "5 Passos" }));
         jComboBox1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox1ItemStateChanged(evt);
             }
         });
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setText("Tempo:");
-
-        campoTempoAtual.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        campoTempoAtual.setText("0");
 
         botaoPausarResumir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         botaoPausarResumir.setText("Pausar");
@@ -353,43 +475,269 @@ public class TelaDeExecucao extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botaoPausarResumir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoEncerrar)
+                .addGap(0, 30, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoPausarResumir)
+                    .addComponent(botaoEncerrar))
+                .addContainerGap())
+        );
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Tempo:");
+
+        campoTempoAtual.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        campoTempoAtual.setText("0");
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Eventos Futuros"));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Tempo");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setText("Tipo do  Evento");
+
+        campoTempoDoEventoFuturo1.setText("jLabel18");
+
+        campoTempoDoEventoFuturo2.setText("jLabel18");
+
+        campoTempoDoEventoFuturo4.setText("jLabel18");
+
+        campoTempoDoEventoFuturo3.setText("jLabel18");
+
+        campoTipoDoEvento1.setText("jLabel18");
+
+        campoTipoDoEvento2.setText("jLabel18");
+
+        campoTipoDoEvento3.setText("jLabel18");
+
+        campoTipoDoEvento4.setText("jLabel18");
+
+        campoTipoDoEvento5.setText("jLabel18");
+
+        campoTempoDoEventoFuturo5.setText("jLabel18");
+
+        campoTempoDoEventoFuturo6.setText("jLabel18");
+
+        campoTipoDoEvento6.setText("jLabel18");
+
+        campoTempoDoEventoFuturo7.setText("jLabel18");
+
+        campoTipoDoEvento7.setText("jLabel18");
+
+        campoTempoDoEventoFuturo8.setText("jLabel18");
+
+        campoTipoDoEvento8.setText("jLabel18");
+
+        campoTempoDoEventoFuturo9.setText("jLabel18");
+
+        campoTipoDoEvento9.setText("jLabel18");
+
+        campoTempoDoEventoFuturo10.setText("jLabel18");
+
+        campoTipoDoEvento10.setText("jLabel18");
+
+        campoTempoDoEventoFuturo11.setText("jLabel18");
+
+        campoTipoDoEvento11.setText("jLabel18");
+
+        campoTempoDoEventoFuturo12.setText("jLabel18");
+
+        campoTipoDoEvento12.setText("jLabel18");
+
+        campoTempoDoEventoFuturo13.setText("jLabel18");
+
+        campoTipoDoEvento13.setText("jLabel18");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(jLabel8)
+                        .addGap(25, 25, 25))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoTempoDoEventoFuturo1)
+                            .addComponent(campoTempoDoEventoFuturo2)
+                            .addComponent(campoTempoDoEventoFuturo3)
+                            .addComponent(campoTempoDoEventoFuturo4)
+                            .addComponent(campoTempoDoEventoFuturo5))
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTipoDoEvento1)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoTipoDoEvento2)
+                                    .addComponent(campoTipoDoEvento3)
+                                    .addComponent(campoTipoDoEvento4)
+                                    .addComponent(campoTipoDoEvento5))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo6)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento6))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo7)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento7))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo8)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento8))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo9)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento9))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo10)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento10))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo11)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento11))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo12)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento12))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(campoTempoDoEventoFuturo13)
+                                .addGap(46, 46, 46)
+                                .addComponent(campoTipoDoEvento13)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTempoDoEventoFuturo1)
+                    .addComponent(campoTipoDoEvento1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTempoDoEventoFuturo2)
+                    .addComponent(campoTipoDoEvento2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTempoDoEventoFuturo3)
+                    .addComponent(campoTipoDoEvento3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTempoDoEventoFuturo4)
+                    .addComponent(campoTipoDoEvento4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento5)
+                    .addComponent(campoTempoDoEventoFuturo5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento6)
+                    .addComponent(campoTempoDoEventoFuturo6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento7)
+                    .addComponent(campoTempoDoEventoFuturo7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento8)
+                    .addComponent(campoTempoDoEventoFuturo8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento9)
+                    .addComponent(campoTempoDoEventoFuturo9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento10)
+                    .addComponent(campoTempoDoEventoFuturo10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento11)
+                    .addComponent(campoTempoDoEventoFuturo11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento12)
+                    .addComponent(campoTempoDoEventoFuturo12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTipoDoEvento13)
+                    .addComponent(campoTempoDoEventoFuturo13))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel17.setText("Velocidade de Execucao");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(81, 92, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(campoTempoAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelEstatisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(campoTempoAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botaoPausarResumir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botaoEncerrar))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel17)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelEstatisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panelEstatisticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(campoTempoAtual)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPausarResumir)
-                    .addComponent(botaoEncerrar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelEstatisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(3, 3, 3)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(campoTempoAtual))
+                        .addGap(27, 27, 27))))
         );
 
         pack();
@@ -417,7 +765,34 @@ public class TelaDeExecucao extends javax.swing.JFrame {
     private javax.swing.JButton botaoEncerrar;
     private javax.swing.JButton botaoPausarResumir;
     private javax.swing.JLabel campoTempoAtual;
+    private javax.swing.JLabel campoTempoDoEventoFuturo1;
+    private javax.swing.JLabel campoTempoDoEventoFuturo10;
+    private javax.swing.JLabel campoTempoDoEventoFuturo11;
+    private javax.swing.JLabel campoTempoDoEventoFuturo12;
+    private javax.swing.JLabel campoTempoDoEventoFuturo13;
+    private javax.swing.JLabel campoTempoDoEventoFuturo2;
+    private javax.swing.JLabel campoTempoDoEventoFuturo3;
+    private javax.swing.JLabel campoTempoDoEventoFuturo4;
+    private javax.swing.JLabel campoTempoDoEventoFuturo5;
+    private javax.swing.JLabel campoTempoDoEventoFuturo6;
+    private javax.swing.JLabel campoTempoDoEventoFuturo7;
+    private javax.swing.JLabel campoTempoDoEventoFuturo8;
+    private javax.swing.JLabel campoTempoDoEventoFuturo9;
+    private javax.swing.JLabel campoTipoDoEvento1;
+    private javax.swing.JLabel campoTipoDoEvento10;
+    private javax.swing.JLabel campoTipoDoEvento11;
+    private javax.swing.JLabel campoTipoDoEvento12;
+    private javax.swing.JLabel campoTipoDoEvento13;
+    private javax.swing.JLabel campoTipoDoEvento2;
+    private javax.swing.JLabel campoTipoDoEvento3;
+    private javax.swing.JLabel campoTipoDoEvento4;
+    private javax.swing.JLabel campoTipoDoEvento5;
+    private javax.swing.JLabel campoTipoDoEvento6;
+    private javax.swing.JLabel campoTipoDoEvento7;
+    private javax.swing.JLabel campoTipoDoEvento8;
+    private javax.swing.JLabel campoTipoDoEvento9;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -431,10 +806,14 @@ public class TelaDeExecucao extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel numeroChamadasCompletadas;
     private javax.swing.JLabel numeroChamadasNoSistema;
     private javax.swing.JLabel numeroDeCanaisDeC1Ocupados;
