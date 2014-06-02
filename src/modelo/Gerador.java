@@ -14,7 +14,7 @@ public class Gerador {
 	double mediaChegadaDeChamadaC1;
 	private final int probabilidadeDeGerarC1C1;
 	private final int probabilidadeDeGerarC1C2;
-	// Atributo abaixo pode ser retirado? � o complemento dos c1c1 e c1c2.
+	// Atributo abaixo pode ser retirado complemento dos c1c1 e c1c2.
 	private final int probabilidadeDeGerarC1FA;
 
 	private final RealDistribution funcaoTempoC2;

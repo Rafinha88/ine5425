@@ -196,7 +196,7 @@ public class ModSimUI extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addComponent(tFrequenciaC1FA)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +253,7 @@ public class ModSimUI extends javax.swing.JFrame {
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
                         .addComponent(tFrequenciaC2FA)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -446,19 +446,19 @@ public class ModSimUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 31, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel18)
                         .addGap(18, 18, 18)
@@ -561,20 +561,71 @@ public class ModSimUI extends javax.swing.JFrame {
 		}
 		return false;
 	}
+        
+        public boolean validarTempoChegadas() {
+            if( tMediaFuncaoTempoC1.getText().equalsIgnoreCase("0")){
+                JOptionPane.showMessageDialog(null,
+					"Os parametros da funcao tempo nao pode ser zero", "Erro na Exponencial",
+					JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+            if( tMediaFuncaoTempoC2.getText().equalsIgnoreCase("0")) {
+                JOptionPane.showMessageDialog(null,
+					"Os parametros da funcao tempo nao pode ser zero", "Erro na Exponencial",
+					JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+            return true;
+        }
 
-	public void verificarFrequencia() {
+        public boolean validarDistribuicao() {
+            switch (tDistribuicaoDuracao.getSelectedItem().toString() ) {
+		case "Triangular":
+			if(parametro1 >= parametro2 | parametro2 >= parametro3) {
+                            JOptionPane.showMessageDialog(null,
+					"Os parametros da distribuica triangular estao errados", "Erro na Distribuicao",
+					JOptionPane.ERROR_MESSAGE);
+                            return false;
+                        }
+                        break;
+		case "Normal":
+			if(parametro2 >= parametro1 | parametro2 == 0) {
+                            JOptionPane.showMessageDialog(null,
+					"Os parametros da distribuica normal estao errados", "Erro na Distribuicao",
+					JOptionPane.ERROR_MESSAGE);
+                            return false;
+                        }
+                        break;
+		case "Uniforme":
+			if(parametro1 >= parametro2) {
+                            JOptionPane.showMessageDialog(null,
+					"Os parametros da distribuica uniforme estao errados", "Erro na Distribuicao",
+					JOptionPane.ERROR_MESSAGE);
+                            return false;
+                        }
+                        break;
+                default:
+                    return true;
+            }
+            return true;
+        }
+        
+	public boolean validarFrequencia() {
 
 		if (frequenciaC1C1 + frequenciaC1C2 + frequenciaC1FA != 100) {
 			JOptionPane.showMessageDialog(null,
 					"A soma da frequencia deve ser 100%", "Erro na Frequencia",
 					JOptionPane.ERROR_MESSAGE);
+                        return false;
 		}
 
 		if (frequenciaC2C1 + frequenciaC2C2 + frequenciaC2FA != 100) {
 			JOptionPane.showMessageDialog(null,
 					"A soma da frequencia deve ser 100%", "Erro na Frequencia",
 					JOptionPane.ERROR_MESSAGE);
-		}
+                        return false;
+                }
+                return true;
 
 	}
 

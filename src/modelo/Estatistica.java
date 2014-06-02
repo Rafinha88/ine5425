@@ -25,7 +25,7 @@ public class Estatistica {
 	private long maiorNumeroDeChamadasNoSistema;
 	private long mediaDeChamadasNoSistema;
 
-	// Estes dois atributos s�o essenciais para calcular o tempo m�dio de
+	// Estes dois atributos sao essenciais para calcular o tempo medio de
 	// chamada.
 	private long tempoTotalDeChamadas;
 	private int numeroDeChamadasRealizadas;
@@ -107,8 +107,8 @@ public class Estatistica {
 
 	/**
 	 * Verifica se o tempo � algum dos extremos. O menor tempo de chamada ou o
-	 * maior. Tamb�m calcula o tempo m�dio da chamada utilizando um contador
-	 * para numero de chamadas j� feitas e o tempo total de chamadas
+	 * maior. Tambem calcula o tempo medio da chamada utilizando um contador
+	 * para numero de chamadas ja feitas e o tempo total de chamadas
 	 * 
 	 * @param tempo
 	 */

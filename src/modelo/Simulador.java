@@ -83,9 +83,10 @@ public class Simulador {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				visao.setVisible(false);
-				visao.preprarVariaveis();
-
+                            visao.preprarVariaveis();
+                            if(visao.validarFrequencia() && visao.validarTempoChegadas() && visao.validarDistribuicao() ) {
+                                visao.setVisible(false);
+                                
 				telaDeExecucao.setVisible(true);
 				new Thread(new Runnable() {
 					@Override
@@ -93,7 +94,7 @@ public class Simulador {
 						iniciar();
 					}
 				}).start();
-
+                            }
 			}
 		});
 		JButton botaoPausarResumir = telaDeExecucao.getBotaoPausarResumir();
