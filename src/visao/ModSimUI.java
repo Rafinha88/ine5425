@@ -561,6 +561,22 @@ public class ModSimUI extends javax.swing.JFrame {
 		}
 		return false;
 	}
+        
+        public boolean validarTempoChegadas() {
+            if( tMediaFuncaoTempoC1.getText().equalsIgnoreCase("0")){
+                JOptionPane.showMessageDialog(null,
+					"Os parametros da funcao tempo nao pode ser zero", "Erro na Exponencial",
+					JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+            if( tMediaFuncaoTempoC2.getText().equalsIgnoreCase("0")) {
+                JOptionPane.showMessageDialog(null,
+					"Os parametros da funcao tempo nao pode ser zero", "Erro na Exponencial",
+					JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+            return true;
+        }
 
         public boolean validarDistribuicao() {
             switch (tDistribuicaoDuracao.getSelectedItem().toString() ) {

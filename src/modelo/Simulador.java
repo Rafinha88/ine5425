@@ -83,7 +83,7 @@ public class Simulador {
 			@Override
 			public void actionPerformed(ActionEvent e) {
                             visao.preprarVariaveis();
-                            if(visao.validarFrequencia() & visao.validarDistribuicao() ) {
+                            if(visao.validarFrequencia() && visao.validarTempoChegadas() && visao.validarDistribuicao() ) {
                                 visao.setVisible(false);
                                 
 				telaDeExecucao.setVisible(true);
